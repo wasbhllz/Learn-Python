@@ -45,6 +45,7 @@ else:
     increase = -5
 b['好感度'] = b['好感度'] + increase
 print(str(b['好感度']))
+
 # 字典练习3
 computer = {
     'CV':'计算机视觉',
@@ -64,5 +65,5 @@ print('我现在的目标是' + computer['ML'] + '!'+'\n'+'我以后的目标是
 '''
 # 遍历字典
 date = {'username':'散兵','country':'稻妻','element':'风'}
-for key,h in date.items():
+for key,h in date.items(): #设定2个变量来存储键——值对
     print(key + ':' + h)
