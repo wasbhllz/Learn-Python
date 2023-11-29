@@ -11,11 +11,11 @@ else:
 
 #综合练习2
 new_user = ['muzi','lulu','Au','bing','siyao']	
-new_user1 = ['Muzi','Mama','siyao','baba']
-a = [new.lower() for new in new_user]
-for a in new_user:
+new_user1 = ['Muzi','mama','baba','Bing']
+a = [new for new in new_user1]
+for a in new_user1:
 	if a.lower() in new_user:
 		print('您的用户名已被使用')
 	else:
 		print('您可以使用该用户名')
-	
+		
