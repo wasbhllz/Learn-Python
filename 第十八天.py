@@ -62,7 +62,10 @@ print('我现在的目标是' + computer['ML'] + '!'+'\n'+'我以后的目标是
 2.不同类型的数据不能一起在存储在变量中
 3.调用字典中参数的时，需要：字典["键"]
 '''
-# 遍历字典
+
+# 遍历字典(返回值的顺序，与字典存储的顺序不同)
 date = {'username':'散兵','country':'稻妻','element':'风'}
-for key,h in date.items():
+for key,h in date.items():# .items()方法，用于返回字典中的键值对列表
     print(key + ':' + h)
+    print('\n属性：'+key) # 同时遍历
+    print('\n类别：'+ h)
