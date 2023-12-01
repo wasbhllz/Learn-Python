@@ -37,8 +37,3 @@ for number in range(30):
     list.append(num)
 for li in list[:5]: # 打印前5个
     print(li)
-
-print('测试')
-print('测试2')
-print('测试3')
-print('测试4')
