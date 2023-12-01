@@ -21,26 +21,34 @@ for y in date.keys():
     print(y)
     if y in favorite:
         print('\n我喜欢的'+y+'原来是'+h+'国的人！')
+
 # 遍历后不包含在该字典中，弹出消息
 if '温迪' not in date.keys():
     print('温迪差一点成为我喜欢的人')
+
 # 用sorted()函数给返回的列表排序
 '''
-排序规则：从小到大排序；对于字符串，按字母表顺序排序；对于元组，则按照元组中元素的自然顺序进行排序。
+排序规则：从小到大排序；
+对于字符串，按字母表顺序排序；
+对于元组，则按照元组中元素的自然顺序进行排序。
 '''
 for e in sorted(date.keys()):
     print(e)
+
 # 用valuse()方法返回值的列表
 for q in date.vlause():
     print(q)
+
 # 用set()函数来调出无序，且不重复的数据集合
 for a in set(date.vlause()):
     print(a)
 for e in sorted(date.keys()):
     print(e)
+
 # 用valuse()方法返回值的列表
 for q in date.values():
     print(q)
+
 # 用set()函数来调出无序，且不重复的数据集合
 for a in set(date.values()):
     print(a)

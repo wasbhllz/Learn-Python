@@ -19,6 +19,7 @@ new_function = ('range','pop','append') # 循环时使用元组作为字典的�
 if new_function not in dictionary.keys():
     for king in new_function:
         print(king + '是我还没有完全掌握的函数')
+
 # 嵌套:将字典存储在列表或者将列表存储在字典中
 # 字典列表
 # 方法1，适合少量添加
@@ -28,6 +29,7 @@ hilichurl_3 = {'color':'blue','经验':'15'}
 collection = [hilichurl_1,hilichurl_2,hilichurl_3]
 for hilichurl in collection:
     print(hilichurl)
+
 # 批量将字典存储为列表
 list = []
 for number in range(30):
@@ -36,5 +38,7 @@ for number in range(30):
 for li in list[:5]: # 打印前5个
     print(li)
 
-
-
+print('测试')
+print('测试2')
+print('测试3')
+print('测试4')
