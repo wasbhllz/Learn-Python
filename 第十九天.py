@@ -36,3 +36,11 @@ for q in date.vlause():
 # 用set()函数来调出无序，且不重复的数据集合
 for a in set(date.vlause()):
     print(a)
+for e in sorted(date.keys()):
+    print(e)
+# 用valuse()方法返回值的列表
+for q in date.values():
+    print(q)
+# 用set()函数来调出无序，且不重复的数据集合
+for a in set(date.values()):
+    print(a)
