@@ -2,9 +2,9 @@
 k = (200,9)
 print(k[0])
 print(k[1])
-
 for o in k:
 	print(o)
+
 # 元组变量赋值
 k = (400,100)
 for o in k:
