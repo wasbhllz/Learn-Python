@@ -38,5 +38,3 @@ for number in range(30):
 for li in list[:5]: # 打印前5个
     print(li)
 print('创建了'+str(len(list)) + '个列表')
-
-# 
