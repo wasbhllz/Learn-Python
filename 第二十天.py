@@ -33,7 +33,8 @@ for hilichurl in collection:
 # 批量将字典存储为列表
 list = []
 for number in range(30):
-    num = {'color':'red','经验':'10'} # 循环的内容
+    num = {'color':'red','经验':'10'}
     list.append(num)
 for li in list[:5]: # 打印前5个
     print(li)
+print('创建了'+str(len(list)) + '个列表')
