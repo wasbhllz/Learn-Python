@@ -8,4 +8,10 @@ for i in deda['赠品']:
     print(i)
 print('各一个哦!')
 
-# 
+# 练习
+it = {'七秒':'会计',
+      '与鹤':['工程师','画师'],
+      '白雾':'学生'
+      }
+for i,t in it.items():
+    print(i+':')
