@@ -1,3 +1,4 @@
+# Ctrl+Shift+V
 - 生成式
 - 决策式
 - 强化学习
@@ -47,4 +48,48 @@
 ## 5.机器学习的应用领域
 - 深度学习
 - 强化学习
+
+
+# 题目
+
+- 例1：给定一个字符串，统计每个字符出现的次数，并返回一个字典，键为字符，值为出现次数。例如，输入"hello"，返回{"h": 1, "e": 1, "l": 2, "o": 1}。
+
+```python
+# 你的代码
+def count_chars(s):
+  # 创建一个空字典
+  dic = {}
+  # 遍历字符串中的每个字符
+  for c in s:
+    # 如果字符已经在字典中，将其对应的值加一
+    if c in dic:
+      dic[c] += 1
+    # 否则，将字符作为键，1作为值，添加到字典中
+    else:
+      dic[c] = 1
+  # 返回字典
+  return dic
+
+# 测试代码
+s = "hello"
+print(count_chars(s))
+```
+
+- 例2：给定一个列表，其中包含多个字典，每个字典表示一个学生的信息，包括姓名，年龄，成绩，性别等。编写一个函数，根据指定的键对列表进行排序，并返回排序后的列表。例如，输入[{"name": "Tom", "age": 18, "score": 90}, {"name": "Alice", "age": 17, "score": 95}, {"name": "Bob", "age": 19, "score": 80}]，按照"name"排序，返回[{"name": "Alice", "age": 17, "score": 95}, {"name": "Bob", "age": 19, "score": 80}, {"name": "Tom", "age": 18, "score": 90}]。
+
+```python
+# 你的代码
+def sort_by_key(lst, key):
+  # 使用列表的sort方法，指定排序的键和升序方式
+  lst.sort(key=lambda x: x[key], reverse=False)
+  # 返回排序后的列表
+  return lst
+
+# 测试代码
+lst = [{"name": "Tom", "age": 18, "score": 90}, {"name": "Alice", "age": 17, "score": 95}, {"name": "Bob", "age": 19, "score": 80}]
+key = "name"
+print(sort_by_key(lst, key))
+```
+
+希望这些代码实战题对你有帮助，如果你想了解更多关于python字典的练习题，你可以访问这些网页¹²³，里面有更多的题目和解答。😊
 
