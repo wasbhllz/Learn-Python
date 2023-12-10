@@ -22,4 +22,5 @@ while True:
         break
     else:
         print('再见!yuhe')
-        
+
+# continue
