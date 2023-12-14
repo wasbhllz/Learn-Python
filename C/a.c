@@ -1,8 +1,9 @@
 # include <stdio.h>
+void san(int);
 int main(){
     int a, b;
     a = 10;
     b = 2 * a;
-    printf("%d³ËÒÔ2µÈÓÚ%d!", a, b);
+    printf("%dçš„2å€æ˜¯%d!", a, b);
     return 0;
 }
