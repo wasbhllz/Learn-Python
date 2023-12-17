@@ -1,13 +1,11 @@
 #include <stdio.h>
-void butler(void); /* ANSI/ISO C函数原型 */
-int main(void)
+extern int num; //声明来自外部的符号
+int main()
 {
-     butler();
-     printf("Yes. Bring me some tea and writeable DVDs.\n");
+     int num2 = 0; //初始化值
+     scanf("%d %d", &num, &num2); //scanf()输出函数
+     int sum = num + num2; //求和
+     printf("%d", sum);
 
      return 0;
-}
-void butler(void) /* 函数定义开始 */
-{
-     printf("You rang, sir?\n");
 }

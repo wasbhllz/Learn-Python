@@ -3,8 +3,8 @@
 注释块 */
 
 # include <stdio.h>
+int num = 1;
 int main(){ 
-   int num = 1;
    printf("先苦后甜才是第 %d 位.\n",num); 
    int a, b;
     a = 10;
