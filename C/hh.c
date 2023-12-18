@@ -1,5 +1,5 @@
 #include <stdio.h>
-extern int num; //声明来自外部的符号
+extern int num; //extern关键字声明来自外部的符号
 int main()
 {
      int num2 = 0; //初始化值
