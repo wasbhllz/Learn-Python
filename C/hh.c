@@ -22,7 +22,7 @@ int main(void)
       a = b; //第9行
       printf("%d %d\n", b, a);
       return 0;
-} */
+} 
 
 // 编写一个程序把你的年龄转换成天数，并显示这两个值。
 int main(){
