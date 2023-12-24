@@ -175,6 +175,6 @@ int main(){
 int main(){
       int q = 0;
       scanf("%d",&q);
-      printf("\0%d",q);
+      printf("%c",q);
 return 0;
 }
