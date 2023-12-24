@@ -164,9 +164,17 @@ int main(){
       }
       return 0;
 } 
-*/
-//题目
+
+// 题目
 int main(){
       printf("     00\n     00\n000000000000\n000000000000\n    0  0\n    0  0");
       return 0;
+}
+*/
+// 12.24
+int main(){
+      int q = 0;
+      scanf("%d",&q);
+      printf("\0%d",q);
+return 0;
 }
