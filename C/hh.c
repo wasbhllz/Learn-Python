@@ -184,5 +184,8 @@ double w;
 scanf("%lf",w);
 printf("%e\n%a",w,w); // 转为指数型
 //转为十六进制
+      int q = 0;
+      scanf("%d",&q);
+      printf("%c",q);
 return 0;
 }
