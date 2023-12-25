@@ -170,11 +170,19 @@ int main(){
       printf("     00\n     00\n000000000000\n000000000000\n    0  0\n    0  0");
       return 0;
 }
-*/
+
 // 12.24
 int main(){
-      int q = 0;
-      scanf("%d",&q);
-      printf("\0%d",q);
+      int ascii = 0;
+      scanf("输入数值转为ASCII码:%d",&ascii);
+      printf("%c",ascii);
+return 0;
+}
+*/
+int main(){
+double w;
+scanf("%lf",w);
+printf("%e\n%a",w,w); // 转为指数型
+//转为十六进制
 return 0;
 }
