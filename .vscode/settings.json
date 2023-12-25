@@ -1,3 +1,6 @@
 {
-    "julia.environmentPath": "e:\\OneDrive\\apply\\remotely-save\\note\\learn\\Learn-Python"
+    "julia.environmentPath": "e:\\OneDrive\\apply\\remotely-save\\note\\learn\\Learn-Python",
+    "files.associations": {
+        "stdio.h": "c"
+    }
 }
