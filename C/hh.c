@@ -172,20 +172,102 @@ int main(){
 }
 
 // 12.24
+// 将输入数值转为ASCII码
 int main(){
       int ascii = 0;
       scanf("输入数值转为ASCII码:%d",&ascii);
       printf("%c",ascii);
 return 0;
 }
-*/
+
+// 转义序列的题目
 int main(){
 double w;
 scanf("%lf",w);
-printf("%e\n%a",w,w); // 转为指数型
-//转为十六进制
+printf("%e",w); // "%e"转为指数型
+printf("%a",w) // "%a"转为十六进制
       int q = 0;
       scanf("%d",&q);
       printf("%c",q);
 return 0;
+}
+
+// 定义一个函数求两个整数的较大值
+int max(int a, int b){
+   if (a > b)
+      return a;
+   else
+      return b;
+}
+int main(){
+   int yu, he;
+   scanf("%d %d", &yu,&he);
+   int qq = max(yu, he); // 忘记将比大小的结果传入到变量中
+   printf("%d",qq);
+   return 0;
+}
+
+// 多条件判断
+int main(){
+   int d,n;
+   printf("输入:");
+   scanf("%d",&d);
+   if(d < 0)
+      n = 1;
+   else if (d == 0)
+      n = 0;
+   else
+      n = -1;
+   printf("输出:%d", n);
+   return 0;
+}
+
+// 12.25
+// 单位换算题目1
+int main(){
+int r;
+scanf("%d",&r);
+float o =r*3.156e7;
+printf("%e",o);
+return 0;
+}
+
+// 单位换算题目2
+int main(){
+int u =0 ;
+scanf("%d",&u);
+printf("%d夸脱水 = ",u);
+int i =u*950 ;
+float v = i/3e-23;
+printf("%e个水分子",v);
+return 0;
+}
+
+// 单位换算题目3
+int main(){
+float t = 2.54e-2;
+int y;
+scanf("%d",&y);
+printf("输入您的身高%d英寸", y);
+float m = y * t;
+printf("您的身高是%.2f米",m);
+return 0;
+}
+
+// 单位换算题目4
+int main(){
+int b;
+scanf("%d",&b);
+int a =b/2;
+int c =b*8;
+int d =b*16;
+int e =b*48;
+printf("%d杯 = %d司 = %d大汤 = %d茶勺",b,a,c,d,e);
+return 0;
+}
+*/
+int main(){
+      char e[] = "我是娜维娅老板的狗！";
+      printf("%d",strlen(e)); //忘记加"%d"了,printf()只能将字符串做为第一参数
+      return 0;
 }
