@@ -1,4 +1,4 @@
-/* pip install kaggle
+/* pip install googletrans
 
 C:\Users\Administrator\.kaggle
 
