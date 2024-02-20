@@ -151,9 +151,12 @@ D.5
 - 不能用&运算符获取register变量的地址，因为寄存器变量可能不存放在内存中，而寄存器不能通过地址直接访问。
 - 不能与static关键字一起使用，因为static关键字表示变量的存储周期是整个程序的运行时间，而register关键字表示变量的存储周期是函数的调用时间。
 
+### scanf 函数
+在遇到空格、制表符和换行符时会停止读取后面的字符，所以在输入整句英文时只会读取第一个单词后停止
+
 ### strlen获取存储字节长度
 #### 练习
-[day9.c](day9.c)
+[day9.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day9.c)
 
 ### \#define:定义常量和宏(预处理替换)
 #### 定义常量
@@ -161,14 +164,14 @@ D.5
 # define WIFE "散兵"
 ```
 #### 练习
-[day10.c](day10.c)
+[day10.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day10.c)
 #### 定义宏
 ```C
 # define ADD (a,d) a+b
 //    宏名 宏的参数 宏体
 ```
 #### 练习
-[day11.c](day11.c)
+[day11.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day11.c)
 
 ### struct结构体
 #### 基本结构
@@ -183,19 +186,17 @@ struct 结构体名{
 结构体.结构体成员
 
 #### 练习
-[day13.c](day13.c)
+[day13.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day13.c)
 
 ### 枚举类型
 - 枚举类型是一种特殊的类型，它用于定义一组命名的常量整数。
 
 ### 派生类型
 
-scanf 函数在遇到空格、制表符和换行符时会停止读取后面的字符，所以在输入整句英文时只会读取第一个单词后停止
-
 ## 循环语句
 ### if分支语句
 #### 练习
-[day8.c](day8.c)
+[day8.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day8.c)
 
 ### switch循环
 #### 基本结构
@@ -213,4 +214,4 @@ switch (表达式) {
 }
 ```
 #### 练习
-[day12.c](day12.c)
+[day12.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day12.c)
