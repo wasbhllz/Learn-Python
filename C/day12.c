@@ -1,21 +1,14 @@
 // 02.11
-/*
-switch语句基本形式：
-switch (整形表达式)
-{
-语句；
-}
-*/
 
 #include <stdio.h>
 int main()
 {
-    int y; // 添加类型声明
+    int y;
     y = 0;
-    scanf("%d", &y);
+    scanf("%d", &y);// 获取输入
     switch (y)
     {
-        case 0:
+        case 0: //case相当于情况1
             printf("风系小男孩:\n");
         case 1: //switch可以嵌套使用
         {
