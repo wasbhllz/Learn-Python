@@ -13,10 +13,10 @@ int main(){
 double w;
 scanf("%lf",w);
 printf("%e",w); // "%e"转为指数型
-printf("%a",w) // "%a"转为十六进制
-      int q = 0;
-      scanf("%d",&q);
-      printf("%c",q);
+printf("%a", w); // "%a"转为十六进制
+int q = 0;
+scanf("%d", &q);
+printf("%c", q);
 return 0;
 }
 
