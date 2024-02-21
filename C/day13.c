@@ -29,3 +29,4 @@ int main(){
     printf("%s\n%d\n%s", b->name, b->age, b->race); //用`->`来通过指针访问结构体的成员
     return 0;
 }
+
