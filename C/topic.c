@@ -1,7 +1,8 @@
 // 02.21
+/*
 #include <stdio.h>
 int main() {
-    int a = 0xABCDEF;
+    int a = 0xABCDEF; // 
         printf("%15d\n",a);
     return 0;
 }
@@ -15,10 +16,48 @@ int main() {
     return 0;
 }
 
+// 生日的输入输出
 #include <stdio.h>
 int main() {
     int a, b,c;
-    scanf("%d%d%d", &a, &b,&c);
-        printf("year=%4d\nmonth=%2d\ndate=%2d",a,b,c);
+    int result = scanf("%4d%2d%2d", &a, &b,&c); // 为避免scanf重复调用导致出现两次提示
+    if (result !=3){ // 判断输入是否为整数,数据项数和占位符的个数相同,即:输入!=1
+        printf("输入的不是整数,请重新输入\n");
+        return 1;
+    }
+    printf("year=%4d\nmonth=%02d\ndate=%02d",a,b,c); // 打印输出的字宽可以用格式指定符"%4d"来指定
+    return 0;
+}
+
+// 缩短二进制
+#include <stdio.h>
+int main() {
+    int a = 1234;
+    printf("%#o %#X",a,a); //"%#o"会在八进制前显示导0，"%#X"在十六进制数前显示前导0X
+    return 0;
+}
+
+// ASCII码
+#include <stdio.h>
+int main() {
+    char a[] = {73, 32, 99, 97, 110, 32, 100, 111, 32, 105, 116 , 33}; // 这些整数表示ASCII码
+        printf("%s", a);
+    return 0;
+}
+
+// 字符转ASCII码
+#include <stdio.h>
+int main() {
+    char a[100];
+    scanf("%s", a); //"%s"不用&取地址
+    printf("%d\n", a);
+    return 0;
+}
+*/
+#include <stdio.h>
+int main(){
+    char a,b;
+    scanf("%s %s",a,b);
+    printf("%d\n%d",b,a);
     return 0;
 }
