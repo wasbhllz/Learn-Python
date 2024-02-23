@@ -201,7 +201,7 @@ struct 结构体名{
 ### switch循环
 #### 基本结构
 ```C
-switch (表达式) {
+switch (条件表达式) {
     case 整型数值1: 
         语句1;
         break;
@@ -215,6 +215,28 @@ switch (表达式) {
 ```
 #### 练习
 [day12.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day12.c)
+
+### for循环
+#### 基本结构
+```C
+for(初始化语句;循环条件;自增或自减){
+    循环体
+}
+```
+#### 练习
+[day14.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day14.c)
+### do while循环
+#### 基本结构
+```C
+do{
+    循环体；
+}
+while(条件表达式)
+```
+#### 练习
+[day15.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day15.c)
+
+
 ## "%c"和"%s"区别
 "%c"和"%s"是C语言中的两种格式说明符，用来输出或输入字符和字符串。它们的区别如下：
 - "%c"对应的是单个字符，"%s"对应的是字符串。例如，char a; char b [20]; scanf ("%c",&a); //只能输入一个字符。 scanf ("%s",b); //可以输入一串不超过20字符的字符串。

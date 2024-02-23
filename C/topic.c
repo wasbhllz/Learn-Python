@@ -1,4 +1,5 @@
 // 02.21
+//ASCII码转字符
 /*
 #include <stdio.h>
 int main() {
@@ -7,6 +8,7 @@ int main() {
     return 0;
 }
 
+// 我是大V
 #include <stdio.h>
 int main() {
     int a;
@@ -37,7 +39,7 @@ int main() {
     return 0;
 }
 
-// ASCII码
+// ASCII码转字符
 #include <stdio.h>
 int main() {
     char a[] = {73, 32, 99, 97, 110, 32, 100, 111, 32, 105, 116 , 33}; // 这些整数表示ASCII码
@@ -53,11 +55,31 @@ int main() {
     printf("%d\n", a);
     return 0;
 }
-*/
+
+// 两个字符颠倒顺序
 #include <stdio.h>
 int main(){
     char a,b;
     scanf("%s %s",a,b);
     printf("%d\n%d",b,a);
+    return 0;
+}
+
+// 嵌套printf先打印括号内的
+#include<stdio.h>
+int main() {
+    printf("\n%d", printf("%s","Hello world!"));
+    return 0;
+    }
+*/
+//计算带余除法
+#include <stdio.h>
+int main() {
+    int a, b;
+    int q = scanf("%d %d", &a, &b);
+    int c = a/b;
+    int d = a%b;
+    if(q == 2)
+        printf("%d %d\n", c,d);
     return 0;
 }

@@ -1,4 +1,4 @@
-// 02.21
+// 02.22
 /*
 // 输入的数字,字符,空格都能打印出来
 # include <stdio.h>
@@ -31,8 +31,16 @@ int main(){
     return 0;
 }
 */
-#include<stdio.h>
-int main() {
-    printf("\n%d", printf("%s","Hello world!"));
-    return 0;
+// 嵌套for循环
+// 先从外层for循环进去判断，再进入内层for循环判断
+# include <stdio.h>
+int main(){
+    for (int q = 0; q < 5; q++){
+        printf("%s", "我爱小白散！🥰");
+        if (q != 1){
+        for (int w = 0; w < 1;w++)
+            printf("%s", "饮月君也好帅！😍");
+        }
+    }
+            return 0;
     }
