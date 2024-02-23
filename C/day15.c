@@ -13,9 +13,3 @@ int main(){
     return 0;
 }
 
-#include <stdio.h>
-int main() {
-    int a = 0xABCDEF; // 
-        printf("%15d\n",a);
-    return 0;
-}

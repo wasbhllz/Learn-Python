@@ -3,7 +3,7 @@
 /*
 #include <stdio.h>
 int main() {
-    int a = 0xABCDEF; // 
+    int a = 0xABCDEF; // 表示ASCII码
         printf("%15d\n",a);
     return 0;
 }
