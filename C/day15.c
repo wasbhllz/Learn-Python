@@ -12,3 +12,5 @@ int main(){
     while (g < 2);
     return 0;
 }
+
+

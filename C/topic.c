@@ -71,7 +71,7 @@ int main() {
     printf("\n%d", printf("%s","Hello world!"));
     return 0;
     }
-*/
+
 //计算带余除法
 #include <stdio.h>
 int main() {
@@ -81,5 +81,28 @@ int main() {
     int d = a%b;
     if(q == 2)
         printf("%d %d\n", c,d);
+    return 0;
+}
+*/
+
+# include <stdio.h>
+# include <windows.h>
+# include <stdlib.h>
+int main(){
+    char b[] = "I can free!";
+    char a[]="###########";
+    int c = 0;
+    int d = strlen(a)-1;
+    printf("%s\n", a);
+    while (c <= d)
+    {
+        a[c] = b[c];
+        a[d] = b[d];
+        Sleep(500); // 
+        printf("%s\n", a);
+        system("cls"); // 清屏，system库函数，可以调用系统命令
+        c++;
+        d--;
+    }
     return 0;
 }
