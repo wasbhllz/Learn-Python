@@ -83,8 +83,8 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
-*/
 
+// 类似字幕遮罩的效果
 # include <stdio.h>
 # include <windows.h>
 # include <stdlib.h>
@@ -98,11 +98,32 @@ int main(){
     {
         a[c] = b[c];
         a[d] = b[d];
-        Sleep(500); // 
+        Sleep(500); // 暂停500毫秒相当于0.5秒，来源<windows.h>
         printf("%s\n", a);
-        system("cls"); // 清屏，system库函数，可以调用系统命令
+        system("cls"); // 清屏，system库函数，可以调用系统命令，来源<stdlib.h>
         c++;
         d--;
     }
+    return 0;
+}
+*/
+// 模拟用户登录的程序
+# include <stdio.h>
+# include <string.h>
+int main(){
+    char z[20] = {0}; //初始化
+    int x = 0;
+    for (x = 0; x < 3;x++){ // 三次循环
+    printf("请输入密码：\n");
+    scanf("%s", z); // 数组本就是地址，不用再取地址
+    if(strcmp(z,"zxcvbn") == 0){ // strcmp库函数,判断数组内的字符串是否相等，相等返回值为0,来源<string.h>
+        printf("密码正确！\n登陆成功!😊");
+        break;
+    }
+    else 
+        printf("密码错误\n");
+    } 
+    if(x == 3)
+        printf("三次输入错误,程序退出");
     return 0;
 }
