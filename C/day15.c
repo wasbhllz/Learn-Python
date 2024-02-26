@@ -13,6 +13,8 @@ int main(){
     return 0;
 }
 
+
+
 // n的阶乘
 # include <stdio.h>
 int main(){

@@ -71,7 +71,7 @@ int main() {
     printf("\n%d", printf("%s","Hello world!"));
     return 0;
     }
-*/
+
 //计算带余除法
 #include <stdio.h>
 int main() {
@@ -83,3 +83,4 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
+*/
