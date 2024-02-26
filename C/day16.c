@@ -1,5 +1,29 @@
 // 02.24
 /*
+// 有序数组的二分查找
+# include <stdio.h>
+int main(){
+    int num[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int n = 8;
+    int least = 0; // 查找的最小范围
+    int u = sizeof(num) / sizeof(num[0]); //数组的数量
+    int utmost = u - 1; // 索引查找的最大范围
+    while (least <= utmost){
+        int middle = (least + utmost) / 2; // 二分查找
+    if (num[middle]<n)
+        least = middle + 1; // 改变最小范围
+    else if(num[middle]>n)
+        utmost = middle - 1; // 改变最大范围
+    else{
+        printf("找到了！🤩 是索引%d号",utmost);
+        break;
+        }
+    }
+    if (least > utmost)
+        printf("本数组中暂无该数据😭");
+        return 0;
+}
+
 // 类似字幕遮罩的效果
 # include <stdio.h>
 # include <windows.h>
@@ -50,7 +74,7 @@ int main(){
 #include <stdlib.h>
 #include <time.h> // 调用系统时间
 void w(){
-    printf("🍀🍀🍀🍀🍀🍀\n");
+    printf("#🍀🍀🍀🍀🍀🍀\n");
     printf("🍀🍀1.play🍀🍀\n");
     printf("🍀🍀0.exit🍀🍀\n");
     printf("#🍀🍀🍀🍀🍀🍀\n");
@@ -58,7 +82,12 @@ void w(){
 void game(){
     int s = 0;
     int y = 0;
-    int e = rand() % 100 + 1; // 生成随机数的函数,游戏设置范围0~99,函数调用的范围是0~RAND_MAX(32767)
+
+    // 生成随机数的函数,游戏设置范围0~100
+    // rand()函数的随机数生成范围是
+    
+    int e = rand() % 100 + 1;
+    0~RAND_MAX(32767)
     while(1){
         for (y = 0; y < 5;y++){ // 猜数字次数设置
         printf("请猜数字:😊\n");
@@ -83,7 +112,13 @@ void game(){
 int main()
 {
    int a = 0;
-   srand((unsigned int)time(NULL)); //设置随机数随时间戳的改变而更加随机,time(NULL)是空指针
+
+   // 设置随机数随时间戳变化为种子，来初始化随机数生成器
+   // srand()函数用来设置：随机数生成器的种子。不调用srand()函数每次启动时会生成一样的随机数
+   // time(NULL)是空指针，返回当前的系统时间
+   // unsigned int将time(NULL)的返回值转换为无符号类型
+
+   srand((unsigned int)time(NULL));
    do {
     w();
     printf("请输入代码：\n");
@@ -111,6 +146,8 @@ int main()
    return 0;
 }
 
+// goto语句可以跳转到指定的标签位置，在一个函数体范围内
+// 会跳转到
 // 电脑关机程序
 # include <stdio.h>
 # include <stdlib.h>
@@ -119,14 +156,72 @@ int main(){
     char input[20] = {0};
     system("shutdown -s -t 60"); //调用系统的关机命令,时间设置为60秒
 hh:
-    printf("您的电脑将在60秒后关机\n请输入:我是散宝的老婆\n来解除危机!🤯\n");
+    printf("您的电脑将在60秒后关机\n请输入:我爱散宝\n来解除危机!🤯\n");
     scanf("%s", input);
-    if(strcmp(input,"我是散宝的老婆") == 0){
+    if(strcmp(input,"我爱散宝") == 0){
         system("shutdown -a"); //取消关机命令
-        
         }
         else
         goto hh;
         return 0;
 }
+
+// 02.26
+// 随机数生成
+# include <stdio.h>
+# include <stdlib.h>
+# include <time.h>
+int main(){
+    srand(time(NULL));
+    int a = rand();
+    printf("%d", a);
+    return 0;
+}
 */
+// 24.02.26
+// 石头、剪刀、布游戏
+# include <stdio.h>
+# include <stdlib.h>
+# include <time.h>
+int main(){
+    int user = 0;
+    int q = 0;
+    int score = 0; 
+    char *choice[20] = {"👊", "✌️", "✋"};
+    while (1)
+    {
+        srand((unsigned)time(NULL));
+        int conmputer = rand() % 3 + 1;
+        printf("👀 欢迎来到石头、剪刀、布游戏！\n❗ 游戏规则是：0——石头，1——剪刀，2——布\n");
+        for (q = 0; q < 3; q++)
+        {
+            printf("你选择出什么呢？😁\n");
+            scanf("%d", &user);
+            if (user == conmputer){
+                score ++;
+                printf("%s %s ，平局了！得分+1\n", choice[user], choice[conmputer]);
+                }
+                else if (user == 1 && conmputer == 2 || user == 2 && conmputer == 3 || user == 3 && conmputer == 1){
+                    score +=2;
+                    printf("%s %s ，对了！得分+2 😎\n", choice[user], choice[conmputer]);       
+                }
+            else
+            {
+                printf("%s %s ,不对，再来一次！😫 本次不加分呢\n", choice[user], choice[conmputer]);
+            }
+        }
+        if(score == 0){
+            printf("得分：%d,你输了，机会用完了！😭\n",score);
+            break;
+        }
+        else if(score == 4){
+            printf("得分：%d,赢了真棒！👍\n",score);
+            break;
+            }
+        else{
+            printf("得分：%d,别灰心！再接再厉！🤗",score);
+            break;
+            }
+    }
+    return 0;
+}
