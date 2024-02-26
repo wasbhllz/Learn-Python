@@ -1,4 +1,4 @@
-// 01.17
+// 24.01.17
 #include <stdio.h>
 # define ADD(a,d)a+b //定义宏
 int main()

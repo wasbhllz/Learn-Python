@@ -1,5 +1,4 @@
-// 02.11
-
+// 24.02.11
 #include <stdio.h>
 int main()
 {

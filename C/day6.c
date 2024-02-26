@@ -1,4 +1,4 @@
-// 12.22
+// 23.12.22
 #include <stdio.h>
 // if和else条件判断
 int main(){

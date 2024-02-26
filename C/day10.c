@@ -1,4 +1,4 @@
-// 12.27
+// 23.12.27
 #include <stdio.h>
 # define WIFE "散兵"
 int main()

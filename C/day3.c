@@ -1,4 +1,4 @@
-// 12.18
+// 23.12.18
 #include <stdio.h>
 extern int num; //声明来自外部的符号
 int main()
