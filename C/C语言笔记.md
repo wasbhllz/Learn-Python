@@ -155,6 +155,8 @@ D.5
 在遇到空格、制表符和换行符时会停止读取后面的字符，所以在输入整句英文时只会读取第一个单词后停止
 
 ### strlen获取存储字节长度
+sizeof 是一个运算符，它可以计算任何类型的数据所占用的内存字节数。
+strlen 是一个函数，它只能计算以空字符 '\0' 结尾的字符串中字符的个数，不包括空字符
 #### 练习
 [day9.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day9.c)
 
