@@ -11,7 +11,7 @@ int main(){
     return 0;
 }
 */
-// 24.02.26
+// 综合练习2
 // 石头、剪刀、布游戏
 # include <stdio.h>
 # include <stdlib.h>

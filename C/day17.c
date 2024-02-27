@@ -1,5 +1,6 @@
 // 24.02.25
 /*
+// 综合练习1
 // 猜数字游戏
 #include <stdio.h>
 #include <stdlib.h>
@@ -76,10 +77,10 @@ int main()
    while (a);
    return 0;
 }
-
+*/
 // goto语句可以跳转到指定的标签位置，在一个函数体范围内会跳转到标签所在
-// 电脑关机程序
 
+// 电脑关机程序
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -96,15 +97,5 @@ hh:
         goto hh;
         return 0;
 }
-*/
-// 02.26
-// 随机数生成
-# include <stdio.h>
-# include <stdlib.h>
-# include <time.h>
-int main(){
-    srand(time(NULL));
-    int a = rand();
-    printf("%d", a);
-    return 0;
-}
+
+
