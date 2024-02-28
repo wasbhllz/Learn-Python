@@ -1,5 +1,5 @@
 // 24.02.27
-/*
+// 两个数字交换
 # include<stdio.h>
 void  d (int* x,int* y ){
     int d = *x; //临时存储
@@ -15,4 +15,4 @@ int main(){
     printf("%d %d",a,b);
     return 0;
 }
-*/
+
