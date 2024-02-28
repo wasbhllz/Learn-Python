@@ -2,13 +2,13 @@
 /*
 // 找出100~200之间的质数
 # include <stdio.h>
-# include <math.h>
+# include <math.h> // 数学库
 int main(){
     int q = 0;
     int w = 0;
     for (q = 101;q<200;q+=2){
         int c = 1;
-        for (int x = 2; x < sqrt(q);x++){
+        for (int x = 2; x < sqrt(q);x++){ // sqrt()函数用来开平方，来源<math.h>
             if (q % x == 0){
                 c = 0;
                 break;
@@ -58,7 +58,7 @@ int main(){
     }
     return 0;
 }
-
+*/
 // 二分查找的函数
 # include <stdio.h>
 int find(int* a,int b,int c){ // 数组传的是指针，所以要写成int*
@@ -84,5 +84,4 @@ int main(){
         printf("没找到");
     return 0;
 }
-*/
-//
+
