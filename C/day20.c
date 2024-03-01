@@ -58,7 +58,7 @@ int main(){
     }
     return 0;
 }
-*/
+
 // 二分查找的函数
 # include <stdio.h>
 int find(int* a,int b,int c){ // 数组传的是指针，所以要写成int*
@@ -84,4 +84,3 @@ int main(){
         printf("没找到");
     return 0;
 }
-
