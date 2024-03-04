@@ -65,18 +65,4 @@ printf("%d的阶乘是%d",s,factorial(s));
 return 0;
 }
 */
-// 用递归求n的K次方
-int power(int s,int a){
-    if(a !=1){
-    return power(s*(a-2));
-    }
-    else 
-        return s * a;
-}
-int main(){
-int s = 0;
-int a = 0;
-scanf("%d %d",&s,&a);
-printf("%d的%d次方是%d",s,a,power(s));
-return 0;
-}
+// 
