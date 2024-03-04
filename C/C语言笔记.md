@@ -218,7 +218,7 @@ else {
 ### switch
 #### 基本结构
 ```C
-switch (条件表达式) {
+switch (整型表达式) {
     case 整型数值1: 
         语句1;
         break;
@@ -230,6 +230,8 @@ switch (条件表达式) {
         语句n+1;
 }
 ```
+**switch的条件表达式只能是整型或字符型，不能是其他类型。**
+没有break语句的switch语句，执行完第一个匹配的case后，会继续执行后续的case，直到遇到break语句或整个switch语句结束为止
 #### 练习
 [day12.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day12.c)
 
