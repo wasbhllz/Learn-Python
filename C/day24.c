@@ -51,7 +51,7 @@ int main(){
 # include <stdio.h>
 int frog(int n){
     int s = 0;
-    if(n ==1 || n==2)
+    if(0 <n<= 2)
         return n;
     for(int a = 2;n-a<=n;a+=2){
         for(int d = 0;a!=n;d++)
@@ -65,3 +65,4 @@ int main(){
     printf("青蛙跳到第%d层台阶有%d种方法\n",steps,frog(steps));
     return 0;
 }
+
