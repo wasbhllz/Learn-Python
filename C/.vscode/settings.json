@@ -4,5 +4,6 @@
         "stdlib.h": "c",
         "time.h": "c",
         "limits": "c"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/Administrator/AppData/Local/Programs/Learn-Python/C/.vscode"
 }

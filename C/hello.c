@@ -1,3 +1,5 @@
+// VS IDE：C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+
 /* pip install googletrans
 
 C:\Users\Administrator\.kaggle
