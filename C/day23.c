@@ -39,15 +39,6 @@ int main(){
     return 0;
 }
 
-// 青蛙跳台阶问题
-# include <stdio.h>
-int main(){
-    int steps =0;
-    scanf("%d",&steps);
-    printf("青蛙跳到第%d层台阶有%d种方法",steps,frog(steps));
-    return 0;
-}
-
 // 半知半解
 // 选择排序:将数字从大到小输出
 # include <stdio.h>
