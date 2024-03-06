@@ -38,7 +38,7 @@ int main(){
     int b = 1;
     for(b = 1;b<10;b++){
         for(a = 9;a>=b;--a){
-            printf("%d x %d = %d  ",a,b,a * b);
+            printf("%d x %d = %2d  ",a,b,a * b); // "%2d"是两位右对齐
             if(a == b) // 避免重复输出
         printf("\n");
         }
