@@ -9,7 +9,7 @@
                 "-g",
                 "*.c",
                 "-o",
-                "Backgammon.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
