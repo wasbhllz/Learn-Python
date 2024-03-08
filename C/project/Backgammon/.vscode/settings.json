@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "time.h": "c",
+        "limits": "c"
+    },
+    "cmake.sourceDirectory": "E:/OneDrive/apply/remotely-save/note/Learn-Python/C/.vscode"
+}
