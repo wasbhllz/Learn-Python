@@ -262,7 +262,7 @@ for(初始化语句;循环条件;自增或自减){
 do{
     循环体；
 }
-while(条件表达式)
+while(条件表达式);
 ```
 ##### 练习
 [day15.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day15.c)

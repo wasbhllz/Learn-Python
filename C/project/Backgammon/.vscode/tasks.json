@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}\\*.c", // 编译该文件夹下的所有.c文件
+                "${workspaceFolder}", // 编译该文件夹下的所有.c文件
                 "-o",
                 "${fileDirname}\\Backgammon.exe"
             ],
