@@ -1,5 +1,5 @@
 // 24.02.25
-/*
+
 // 综合练习1
 // 猜数字游戏
 #include <stdio.h>
@@ -21,7 +21,7 @@ void game(){
 
     int e = rand() % 100 + 1;
     while(1){
-        for (y = 0; y < 5;y++){ // 猜数字次数设置
+        for (y = 0; y < 7;y++){ // 猜数字次数设置
         printf("请猜数字:😊\n");
         scanf("%d", &s); // 更新用户输入
             if (s > e)
@@ -59,7 +59,7 @@ int main()
    {
     case 1:
     {
-       printf("猜数字游戏现在开始！\n限制:在5次之内猜对哦!\n"); //忘记码break;
+       printf("猜数字游戏现在开始！\n限制:在7次之内猜对哦!\n"); //忘记码break;
        game(); //调用自制游戏函数
        break; 
     }
@@ -77,9 +77,9 @@ int main()
    while (a);
    return 0;
 }
-*/
-// goto语句可以跳转到指定的标签位置，在一个函数体范围内会跳转到标签所在
 
+// goto语句可以跳转到指定的标签位置，在一个函数体范围内会跳转到标签所在
+/*
 // 电脑关机程序
 # include <stdio.h>
 # include <stdlib.h>
@@ -97,5 +97,5 @@ hh:
         goto hh;
         return 0;
 }
-
+*/
 
