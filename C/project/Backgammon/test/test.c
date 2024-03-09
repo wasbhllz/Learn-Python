@@ -1,5 +1,4 @@
 // 23.12.10
-# include <stdio.h>
 # include "game.h"
 
 void interface(){
@@ -13,13 +12,13 @@ int main(){
       scanf("%d",&input);
          switch(input){
             case 1:
-               printf("三子棋!");
+               game();
                break;
             case 0:
                printf("退出游戏，再见！\n");
                break;
             default:
-               printf("输入错误，请重新输入：\n");
+               printf("输入错误，请重新输入\n");
                break;
          }
    } while (input);
