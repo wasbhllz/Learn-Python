@@ -1,3 +1,4 @@
+// .c文件用来放函数实现
 # include "game.h"
 void initialize(char board[ROW][COL],int row,int col){
     for (int i = 0; i < row;i++)
@@ -56,11 +57,11 @@ void computer(char board[ROW][COL],int row,int col){
 }
 void game(){
     char board[ROW][COL] = {0};
-    initialize(board,ROW,COL); // 初始化棋盘
-    implement(board, ROW, COL); // 打印棋盘
+    initialize(board,ROW,COL);
+    implement(board, ROW, COL);
     while(1){
     user(board,ROW,COL);
-    implement(board, ROW, COL); // 打印棋盘
+    implement(board, ROW, COL);
     computer(board,ROW,COL);
     implement(board, ROW, COL);
     }
