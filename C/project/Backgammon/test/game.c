@@ -37,13 +37,17 @@ void user(char board[ROW][COL],int row,int col){
     {
         printf("请输入坐标：\n");
         scanf("%d,%d",&x,&y);
-        if(0<x<=row && 0<y<=col)
+        if(1<=x<=row && 1<=y<=col)
         {
             if(board[x-1][y-1] ==' ')
+            {
                 board[x-1][y-1] = '*';
+                break;
+            }
             else
             {
                 printf("坐标已被占用，请重新输入！\n");
+                
             }
         }
         else{
