@@ -3,4 +3,10 @@
 #define COL 3
 void initialize(char board[ROW][COL], int row, int col);
 
+void implement(char board[ROW][COL], int row, int col);
+
 void game();
+
+void user(char board[ROW][COL],int row,int col);
+
+void computer(char board[ROW][COL],int row,int col);
