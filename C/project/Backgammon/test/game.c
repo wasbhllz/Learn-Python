@@ -1,5 +1,9 @@
 // .c文件用来放函数实现
 # include "game.h"
+int x = 0;
+int y = 0;
+int a = 0;
+int b = 0;
 void initialize(char board[ROW][COL],int row,int col){
     for (int i = 0; i < row;i++)
         for (int j = 0; j < col;j++)
@@ -29,15 +33,13 @@ void implement(char board[ROW][COL],int row,int col)
         printf("\n");
     }
 }
-void user(char board[ROW][COL],int row,int col){
-    int x = 0;
-    int y = 0;
-    printf("玩家先手!\n");
+void user(char board[ROW][COL],int row,int col){ // 条件范围错误导致的分支错误 
+    printf("该玩家下了!\n");
     while(1)
     {
         printf("请输入坐标：\n");
         scanf("%d,%d",&x,&y);
-        if(1<=x<=row && 1<=y<=col)
+        if(1<=x && x<=row && 1<=y && y<=col)
         {
             if(board[x-1][y-1] ==' ')
             {
@@ -47,27 +49,118 @@ void user(char board[ROW][COL],int row,int col){
             else
             {
                 printf("坐标已被占用，请重新输入！\n");
-                
             }
         }
-        else{
+        else
+        {
             printf("非法坐标，请重新输入！\n");
-            
-            }
+        }
     }
 }
-void computer(char board[ROW][COL],int row,int col){
-    printf("电脑先手!\n");
+void computer(char board[ROW][COL],int row,int col)
+{
+    printf("该电脑下了!\n");
+    while(1)
+    {
+        a = rand()%row;
+        b = rand()%col;
+        if(board[a][b] ==' ')
+        {
+            if(board[1][1]!='*')
+            {
+                board[a][b] =board[1][1];
+                board[1][1]='#';
+                break;
+            }
+            else
+            {
+                board[a][b]='#';
+                break;
+            }
+        }
+    }
+}
+char judgment(char board[ROW][COL],int row,int col)
+{
+    int i = 0;
+    int j = 0;
+    // 行
+    for(i=0;i<row;i++)
+    {
+        if(board[i][0] !=' ' && board[i][0] ==board[i][1] ==board[i][2])
+            return board[i][0];
+    }
+    // 列
+    for(j=0;j<row;j++)
+    {
+        if(board[0][j] !=' ' && board[0][j] ==board[1][j] ==board[2][j])
+            return board[0][j];
+    }
+    // 对角线
+    if(board[1][1] !=' ' && board[0][0] ==board[1][1] ==board[2][2] && board[0][2] ==board[1][1] ==board[2][0])
+        return board[1][1];
+    // 判断是否平局
+    for(i=0;i<row;i++)
+        {
+        for(j =0;j<col;j++)
+        {
+            if(board[i][j] ==' ')
+                return 0;
+            else
+                return 1;
+        }
+    }
 }
 void game(){
+    char ret = 0;
     char board[ROW][COL] = {0};
     initialize(board,ROW,COL);
     implement(board, ROW, COL);
-    while(1){
-    user(board,ROW,COL);
-    implement(board, ROW, COL);
-    computer(board,ROW,COL);
-    implement(board, ROW, COL);
+    srand(time(0));
+    int probability = rand()%2;
+    while(1)
+    {
+        if(probability == 1)
+            user(board,ROW,COL);
+        else
+            computer(board,ROW,COL);
+        implement(board, ROW, COL);
+        ret = judgment(board, ROW, COL);
+        if(ret == 1)
+            break;
+        if(probability == 1)
+            computer(board,ROW,COL);
+        else
+            user(board,ROW,COL);
+        implement(board, ROW, COL);
+        ret = judgment(board, ROW, COL);
+        if(ret == 1)
+            break;
     }
+    if(ret =='*' )
+    {
+        printf("玩家赢了！🤗\n");
+    }
+    else if(ret =='#')
+    {
+        printf("电脑赢了！😜\n");
+    }
+    else if(ret=='q')
+    {
+        printf("平局！\n");
+    }
+    else
+        printf("继续游戏\n");
+
 } 
+/*
+1生成的原坐标，是2，2没重叠，占位成功
+2生成的原坐标，是2，2重叠，占位失败，重新生成
+3生成的原坐标，不是2，2，可以替换为2，2，下新位置棋
+4生成的原坐标，不是2，2，不可以替换为2，2，下原位置棋
+5
+6棋盘满了，平局
+*/
+
+
 
