@@ -353,3 +353,28 @@ goto 标签名;
 [day25.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day25.c)
 ### 变长数组
 在 C 99 引入的概念，在支持 C 99 的编译器，比如 gcc 等，可以在程序运行时引入数组的长度，从而动态分配，而不是在编译之前写死不动，但同时数组长度过大会引起栈溢出。
+```C
+#include <stdio.h>
+
+int main() {
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    int array[size]; // 声明一个变长数组
+
+    // 初始化数组
+    for (int i = 0; i < size; i++) {
+        array[i] = i;
+    }
+
+    // 打印数组
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+```
