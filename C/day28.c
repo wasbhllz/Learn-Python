@@ -3,18 +3,13 @@
 /**/
 # include <stdio.h>
 # include <string.h>
-char reverse_string(char* string)
-{
-    int len = strlen(string);
-    for(int a = len;0 <= a;a--)
-    {
-        printf("%s",string[a]);
-    }
-}
 int main()
 {
-    char string[] = {0};
-    scanf("%s",&string);
+    char string[20]; // 输入数组时，需要初始化数组的长度
+    scanf("%s",string);
+    int len = strlen(string);
+    for(int a = len-1;0 <= a;a--)
+        printf("%c",string[a]);
     return 0;
 }
 
