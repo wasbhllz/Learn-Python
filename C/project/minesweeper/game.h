@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define ROW 11
-#define COL 11
+#define ROW 9
+#define COL 9
+#define ROWS ROW+2
+#define COLS COL+2
 // 雷的数量
 #define MINE_COUNT 9
 // 开始游戏！

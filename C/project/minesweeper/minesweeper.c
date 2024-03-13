@@ -8,17 +8,22 @@ char interface(){
 }
 int main(){
     int input = 0;
-    while(1)
-    {
+    do{
         interface();
         scanf("%d", &input);
-        do
+        switch(input)
         {
+        case 1:
             printf("🎊游戏开始！\n");
             game();
             break;
-        } while (input == 1);
+        case 0:
+        printf("👋再见！\n");
             break;
+        default:
+            printf("输入错误！\n");
+        }
     }
+    while (input);
     return 0;
 }
