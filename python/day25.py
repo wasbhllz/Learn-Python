@@ -17,15 +17,12 @@ while True:
         break
     else:
         print('再来一次!') """
+
 # 用while循环来实现for循环的效果
 qq = ['散兵','达达利亚','魈','巴巴托斯']
 e = 0
-r =len(qq)-1
+r = len(qq)-1
 while e <= r:
     z = qq[e]
     print('我好喜欢'+z+'!')
     e += 1
-
-## 学习
-
-
