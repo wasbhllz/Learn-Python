@@ -27,13 +27,14 @@ void lay_mines(char board[ROWS][COLS],int row,int col)
         int b = rand() % col-1;
         if(board[a][b] == '0')
         {
-            board[a][b] = '#';
+            board[a][b] = '1';
             num--;
         }
     }
 }
 void current_status(char board[ROWS][COLS], int row, int col){
     int i, j;
+    printf("—————扫雷游戏—————\n");
     for (j = 0; j <= col;j++)
         printf("%d ", j);
     printf("\n");
@@ -44,20 +45,46 @@ void current_status(char board[ROWS][COLS], int row, int col){
                 printf("%c ", board[i][j]);
             printf("\n");
         }
-
     printf("\n");
-
 }
-void user(char board[ROW][COL],int row,int col){
+int judge(char board[ROWS][COLS],char board_2[ROWS][COLS],int x,int y)
+{
+    int s = 0;
+    int t = 0;
+    int a = 0;
+    for(s = -1; s <= 1;s++)
+    {
+        for(t = -1; t <= 1;t++)
+        {
+            if(board[x+s][y+t] == '1')
+            {
+                a = board[x+s][y+t]-'0';
+                return ++a; // '1'-'0'=1,'0'-'0'=0
+            }
+        }
+    }
+}
+void user(char board[ROWS][COLS],char board_2[ROWS][COLS],int row,int col)
+{
     int x = 0;
     int y = 0;
-    scanf("%d,%d",&x,&y);
-    board[x][y] = board[x][y];
-    if(board[x][y]!='#')
-
-    board[x][y] = '*';
-    else
-    printf("游戏结束！");
+    int m = 0;
+    while(m < row*col-MINE_COUNT)
+    {
+        printf("请输入坐标扫雷：\n");
+        scanf("%d,%d" &x,&y);
+        if(board_2[x][y] =='1')
+        {
+            printf("踩到雷了，被炸死了!\n");
+            break;
+        }
+        else
+        {
+            m++;
+            printf(judge(board,board_2,x,y)+'0');
+        }
+    }
+    printf("恭喜你，胜利了！🎉\n");
 }
 void game()
 {
@@ -67,7 +94,7 @@ void game()
     explore(board_2, ROWS,COLS,'0'); 
     //
     lay_mines(board_2,ROW,COL); 
-    explore(board,ROW,COL,'*');
+    //explore(board,ROW,COL,'*');
     current_status(board_2,ROW,COL);
-    //user(board,ROW,COL);
+    user(board,board_2,ROW,COL);
 }
