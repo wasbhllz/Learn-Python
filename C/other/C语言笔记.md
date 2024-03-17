@@ -329,6 +329,9 @@ goto 标签名;
 
 在公司里会将函数的声明和实现分别放在.h和.C文件中,再将.C文件编译成静态库lib文件供使用
 编译方法：使用 gcc 命令编译. C 文件为. Lib 文件，输入：gcc -c * . C，再输入：ar -cr * . Lib * .O
+
+**EOF（End Of File）是表示文件结束的标志符号**
+
 ![4e9703d56f3189ae3c283f5b433be07.jpg](https://s1.vika.cn/space/2024/03/02/a1c38a89ca2b483091d070daccce6411)
 
 ## "%c"和"%s"区别
