@@ -7,7 +7,7 @@
 #define COLS COL+2
 
 // 雷的数量
-#define MINE_COUNT 10
+#define MINE_COUNT 80
 
 // 开始游戏！
 void game();
@@ -21,5 +21,5 @@ void explore(char borad[ROWS][COLS], int row, int col, char ret);
 // 打印棋盘
 void current_status(char board[ROWS][COLS], int row, int col);
 
-// 判断玩家
-void user(char board[ROWS][COLS],char board_2[ROWS][COLS], int row, int col);
+// 排查地雷
+void Investigation(char board[ROWS][COLS],char board_2[ROWS][COLS], int row, int col);

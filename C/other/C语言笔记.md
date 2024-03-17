@@ -381,3 +381,5 @@ int main() {
 }
 
 ```
+
+system("cls")系统清屏命令
