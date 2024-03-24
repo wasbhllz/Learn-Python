@@ -7,7 +7,7 @@
 #define COLS COL+2
 
 // 雷的数量
-#define MINE_COUNT 80
+#define MINE_COUNT 10
 
 // 开始游戏！
 void game();
