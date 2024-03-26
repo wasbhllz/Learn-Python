@@ -1,4 +1,4 @@
-// 02.21
+// 24.02.21
 //ASCII码转字符
 /*
 #include <stdio.h>
@@ -27,7 +27,7 @@ int main() {
         printf("输入的不是整数,请重新输入\n");
         return 1;
     }
-    printf("year=%4d\nmonth=%02d\ndate=%02d",a,b,c); // 打印输出的字宽可以用格式指定符"%4d"来指定
+    printf("year=%4d\nmonth=%02d\ndate=%02d",a,b,c); // 打印输出的字宽可以用格式指定符"%4d"来指定，可以使打印更加美观
     return 0;
 }
 
