@@ -91,3 +91,120 @@ has 42 characters.
 修改为printf("\"%s\"",Q);
 
 ## 16.找出下面程序中的错误
+```C
+define B booboo
+define X 10
+main(int)
+{
+    int age;
+    char name;
+    printf("Please enter your first name.");
+    scanf("%s",name);
+    printf("All right,%c,what's your age?\n",name);
+    scanf("%f",age);
+    xp= age + X;
+    printf("That's a %s!You must be at least %d.\n",B, xp);
+    return 0;
+}
+```
+
+1.define 没有#号
+2.main(int) 应该为int main()
+3.scanf 没有取地址&
+4.%c 应该为%s
+未发现：
+5.name应该用数组存储
+6.px没有在使用前声明
+
+## 17.假设一个程序的开头是这样:
+```c
+#define B00K "War and Peace"
+int main(void)
+{
+float cost =12.99;
+float percent =80.0;
+```
+请构造一个使用 BOOK、cost和percent的printf()语句，打印以下内容:
+This copy of "War and Peace" sells for $l2.99.
+That is 80% of list.
+
+```C
+printf("This copy of \"%s\" sells for $%.2f.\nThat is %d\% of list.",BOOK,cost,percent);
+```
+## 18.打印下列各项内容要分别使用什么转换说明?
+a.一个字段宽度与位数相同的十进制整数
+b.一个形如8A、字段宽度为4的十六进制整数
+c.一个形如232.346、字段宽度为10的浮点数
+d.一个形如2.33e+002、字段宽度为12的浮点数
+e.一个字段宽度为30、左对齐的字符串
+
+%d
+%04x // 0表示当字符数少于4时，用0填充，而不是空格
+%10.3f
+%12e
+%-30s // 左对齐
+
+## 19.打印下面各项内容要分别使用什么转换说明?
+a.字段宽度为15的unsigned long 类型的整数
+b.一个形如0x8a、字段宽度为4的十六进制整数
+c.一个形如2.33E+02、字段宽度为12、左对齐的浮点数
+d.一个形如+232.346、字段宽度为10的浮点数e.
+e.一个字段宽度为8的字符串的前8个字符
+
+%15d
+%04x
+%-12e
+%10.3f
+%8.8s //后面的.8表示显示字符串的前8位
+
+## 20.打印下面各项内容要分别使用什么转换说明?
+a.一个字段宽度为6、最少有4位数字的十进制整数
+b.一个在参数列表中给定字段宽度的八进制整数
+c.一个字段宽度为2的字符
+d.一个形如+3.13、字段宽度等于数字中字符数的浮点数
+e.一个字段宽度为7、左对齐字符串中的前5个字符
+
+%6d
+%
+
+## 21.分别写出读取下列各输入行的scanf()语句，并声明语句中用到变量和数组。
+a. 101
+b.22.32 8.34E-09
+c. linguini
+catch 22
+e. catch 22(但是跳过catch)
+
+## 22.什么是空白?
+## 23.下面的语句有什么问题?如何修正?
+printf("The double type is $z bytes..n",sizeof(double));
+
+## 24.假设要在程序中用圆括号代替花括号，以下方法是否可行?
+#define ( {
+#define ) }
+应使用数字字母下划线来命名宏
+
+## 25.假设下面是完整程序中的一部分，它们分别打印什么?
+```c
+a.
+    int x=0;
+    while(++x < 3){
+    printf("%4d"，x);
+    }
+b.
+    int x= 100;
+    while (x++ < 103){
+    printf("$4d\n",x);
+    printf("&4d\n",x);
+    }
+c.
+    char ch='s';
+    while (ch < 'w')
+    {
+    printf("%c",ch);
+    ch++;
+    }
+    printf("%c\n",ch);
+```
+   1   2
+ 100 101 101 102 102 103
+从's'的ASCII码值开始，逐渐+1打印出对应的字符，直到'w'停止
