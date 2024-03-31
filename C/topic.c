@@ -84,6 +84,28 @@ int main() {
     return 0;
 }
 */
+//序列中删除指定数字
+#include <stdio.h>
+
+int main() {
+    int a = 0;
+    scanf("%d",&a);
+    int arr[a];
+    int i = 0;
+    for(i= 0;i<a;i++)
+        scanf("%d",&arr[i]);
+    int del = 0;
+    scanf("%d",&del);
+    int j =0;
+    for(i=0;i<a;i++){
+        if(arr[i]!= del)
+            arr[j++] =arr[i];
+        }
+    for(i=0;i<j;i++)
+        printf("%d ",arr[i]);
+    return 0;
+}
+
 // 1.编写一个程序，把用分钟表示的时间转换成用小时和分钟表示的时间。使用#define或const创建一个表示60的符号常量或const 变量。通过 while 循环让用户重复输入值，直到用户输入小于或等于0的值才停止循环。
 
 // 编写一个程序，提示用户输入一个整数，然后打印从该数到比该数大10的所有整数(例如，用户输入5，则打印5~15的所有整数，包括5和15)。要求打印的各值之间用一个空格、制表符或换行符分开。
