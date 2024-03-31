@@ -83,7 +83,7 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
-
+// 24.03.31
 //序列中删除指定数字
 #include <stdio.h>
 int main() {
