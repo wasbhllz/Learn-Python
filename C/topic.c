@@ -83,10 +83,9 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
-*/
+
 //序列中删除指定数字
 #include <stdio.h>
-
 int main() {
     int a = 0;
     scanf("%d",&a);
@@ -105,6 +104,22 @@ int main() {
         printf("%d ",arr[i]);
     return 0;
 }
+
+//青蛙跳台阶
+#include <stdio.h>
+int recursion(int a){
+    if(a<=2)
+        return a;
+    else
+        return recursion(a-1)+recursion(a-2);
+}
+int main() {
+    int a = 0;
+    scanf("%d",&a);
+    printf("%d",recursion(a));
+    return 0;
+}
+*/
 
 // 1.编写一个程序，把用分钟表示的时间转换成用小时和分钟表示的时间。使用#define或const创建一个表示60的符号常量或const 变量。通过 while 循环让用户重复输入值，直到用户输入小于或等于0的值才停止循环。
 
