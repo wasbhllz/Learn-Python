@@ -167,7 +167,7 @@ int main() {
     printf("%d",arr[z-1][c-1]);
     return 0;
 }
-*/
+
 //矩阵转置
 #include <stdio.h>
 int main() {
@@ -193,6 +193,36 @@ int main() {
     }
     return 0;
 }
+
+//字母大小写转换
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char a = 0;
+    while (scanf("%c", &a) != EOF) {
+        if (islower(a)) //判断是否为小写字符的函数,头文件是<ctype.h>
+            printf("%c\n", toupper(a)); //转换为大写字符的函数
+        else if (isupper(a)) //判断是否为大写字符的函数
+            printf("%c\n", tolower(a)); //转换为小写字符的函数
+    }
+    return 0;
+}
+
+//最高分数
+#include <stdio.h>
+int main() {
+    int a;
+    int i = 0;
+    int max = 0;
+    for (i = 0; i < 3; i++) {
+        scanf("%d ", &a);
+        if (a > max)
+            max = a;
+    }
+    printf("%d", max);
+    return 0;
+}
+*/
 // 1.编写一个程序，把用分钟表示的时间转换成用小时和分钟表示的时间。使用#define或const创建一个表示60的符号常量或const 变量。通过 while 循环让用户重复输入值，直到用户输入小于或等于0的值才停止循环。
 
 // 编写一个程序，提示用户输入一个整数，然后打印从该数到比该数大10的所有整数(例如，用户输入5，则打印5~15的所有整数，包括5和15)。要求打印的各值之间用一个空格、制表符或换行符分开。
