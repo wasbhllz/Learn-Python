@@ -119,7 +119,7 @@ int main() {
     printf("%d",recursion(a));
     return 0;
 }
-*/
+
 // 24.03.01
 //最高分与最低分之差
 #include <stdio.h>
@@ -146,6 +146,51 @@ int main() {
         }
     }
     printf("%d",max-small);
+    return 0;
+}
+
+//矩阵元素定位
+#include <stdio.h>
+int main() {
+    int arr[10][5];
+    int x,y;
+    int z,c;
+    int a= 0;
+    scanf("%d %d",&x,&y);
+    for(int i=0;i<x;i++){
+        for(int j=0;j<y;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    scanf("%d %d",&z,&c);
+    if(z<=x&&c<=y)
+    printf("%d",arr[z-1][c-1]);
+    return 0;
+}
+*/
+//矩阵转置
+#include <stdio.h>
+int main() {
+    int arr[10][10];
+    int arr2[10][10];
+    int a, b;
+    scanf("%d %d", &a, &b);
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            arr2[j][i] = arr[i][j];
+        }
+    }
+    for (int i = 0; i < b; i++) {
+        for (int j = 0; j < a; j++) {
+            printf("%d ", arr2[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
 // 1.编写一个程序，把用分钟表示的时间转换成用小时和分钟表示的时间。使用#define或const创建一个表示60的符号常量或const 变量。通过 while 循环让用户重复输入值，直到用户输入小于或等于0的值才停止循环。
