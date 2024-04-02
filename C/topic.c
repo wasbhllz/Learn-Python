@@ -83,7 +83,7 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
-
+// 24.03.31
 //序列中删除指定数字
 #include <stdio.h>
 int main() {
@@ -168,6 +168,7 @@ int main() {
     return 0;
 }
 
+
 //矩阵转置
 #include <stdio.h>
 int main() {
@@ -193,6 +194,36 @@ int main() {
     }
     return 0;
 }
+
+//字母大小写转换
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char a = 0;
+    while (scanf("%c", &a) != EOF) {
+        if (islower(a)) //判断是否为小写字符的函数,头文件是<ctype.h>
+            printf("%c\n", toupper(a)); //转换为大写字符的函数
+        else if (isupper(a)) //判断是否为大写字符的函数
+            printf("%c\n", tolower(a)); //转换为小写字符的函数
+    }
+    return 0;
+}
+
+//最高分数
+#include <stdio.h>
+int main() {
+    int a;
+    int i = 0;
+    int max = 0;
+    for (i = 0; i < 3; i++) {
+        scanf("%d ", &a);
+        if (a > max)
+            max = a;
+    }
+    printf("%d", max);
+    return 0;
+}
+
 */
 //变种水仙花数
 #include <stdio.h>
