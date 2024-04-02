@@ -167,7 +167,7 @@ int main() {
     printf("%d",arr[z-1][c-1]);
     return 0;
 }
-*/
+
 //矩阵转置
 #include <stdio.h>
 int main() {
@@ -190,6 +190,17 @@ int main() {
             printf("%d ", arr2[i][j]);
         }
         printf("\n");
+    }
+    return 0;
+}
+*/
+//变种水仙花数
+#include <stdio.h>
+int main() {
+    int i=0;
+    for(i=10000;i<=99999;i++){
+    if(((i/10000)*(i%10000))+((i/1000)*(i%1000))+((i/100)*(i%100))+((i/10)*(i%10))==i)
+    printf("%d ",i);
     }
     return 0;
 }
