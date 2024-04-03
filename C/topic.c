@@ -224,7 +224,6 @@ int main() {
     return 0;
 }
 
-*/
 //变种水仙花数
 #include <stdio.h>
 int main() {
@@ -233,6 +232,23 @@ int main() {
     if(((i/10000)*(i%10000))+((i/1000)*(i%1000))+((i/100)*(i%100))+((i/10)*(i%10))==i)
     printf("%d ",i);
     }
+    return 0;
+}
+*/
+//统计数据正负个数
+#include <stdio.h>
+int main() {
+    int a = 0;
+    int b = 0;
+    int arr[20] = {0};
+    for (int i = 0; i <= 10; i++) {
+        scanf("%d ", &arr[i]);
+        if (arr[i] > 0)
+            a++;
+        else if (arr[i] < 0)
+            b++;
+    }
+    printf("positive:%d\nnegative:%d",a,b);
     return 0;
 }
 // 1.编写一个程序，把用分钟表示的时间转换成用小时和分钟表示的时间。使用#define或const创建一个表示60的符号常量或const 变量。通过 while 循环让用户重复输入值，直到用户输入小于或等于0的值才停止循环。
