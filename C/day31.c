@@ -10,7 +10,7 @@ int main(){
     return 0;
 }
 //数组能够从左往右访问越界后一位，但不能从右往左越界前一位
-*/
+
 //指针数组
 int main(){
     int arr[]={1,2,3};
@@ -28,3 +28,25 @@ int main(){
     }
     return 0;
 }
+*/
+// 结构体嵌套
+struct stu{
+    char name[10];
+    char an[10];
+};
+void print(struct stu* ps){
+	printf("%s %s\n",ps->name,ps->an);
+}
+struct zan{
+    struct stu san2; //可以嵌套使用，但不能嵌套创建
+    int age;
+};
+int main()
+{
+   struct stu san ={"散兵","雷系"};
+   struct zan xan={{"流浪者","风系"},500}; //嵌套赋值
+   print(&san);
+   printf("%s %s %d\n",xan.san2.name,xan.san2.an,xan.age);
+   return 0;
+}
+
