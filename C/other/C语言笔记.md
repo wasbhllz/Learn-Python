@@ -142,7 +142,8 @@ title:一般机器和解释器一般进行的是算术右移
 - **按位取反** (`~`): 对一个数的二进制补码按位取反,将1变为0，将0变为1。常用于生成一个数的补码
 
 这些操作符在位掩码、状态管理、权限控制、数据加密等领域有广泛的应用
-
+#### 练习
+[day30.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day30.c)
 ### 4.单目操作符
 - `sizeof(变量)`返回操作数的类型长度(以字节为单位)
 - `&` 取地址符
@@ -242,7 +243,7 @@ i++ 后置，先使用（复制、打印或返回），后增加
 sizeof 是一个运算符，它可以计算任何类型的数据所占用的内存字节数。
 strlen 是一个函数，它只能计算以空字符 '\0' 结尾的字符串中字符的个数，不包括空字符
 #### 练习
-[day9.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day9.c)
+[day9.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day9.c)
 
 ### \#define:定义常量和宏(预处理替换)
 #### 定义常量
@@ -250,14 +251,14 @@ strlen 是一个函数，它只能计算以空字符 '\0' 结尾的字符串中�
 # define WIFE "散兵"
 ```
 #### 练习
-[day10.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day10.c)
+[day10.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day10.c)
 #### 定义宏
 ```C
 # define ADD (a,d) a+b
 //    宏名 宏的参数 宏体
 ```
 #### 练习
-[day11.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day11.c)
+[day11.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day11.c)
 
 ### 结构体
 #### 基本结构
@@ -275,7 +276,7 @@ strlen 是一个函数，它只能计算以空字符 '\0' 结尾的字符串中�
 结构体.结构体成员
 
 #### 练习
-[day13.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day13.c)
+[day13.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day13.c)
 
 ### 枚举类型
 - 枚举类型是一种特殊的类型，它用于定义一组命名的常量整数。
@@ -298,7 +299,7 @@ else {
 }
 ```
 ##### 练习
-[day7.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day7.c)
+[day7.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day7.c)
 
 ### switch
 #### 基本结构
@@ -318,7 +319,7 @@ switch (整型表达式) {
 **switch的条件表达式只能是整型或字符型，不能是其他类型。**
 没有break语句的switch语句，执行完第一个匹配的case后，会继续执行后续的case，直到遇到break语句或整个switch语句结束为止
 #### 练习
-[day12.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day12.c)
+[day12.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day12.c)
 
 ### 循环语句
 #### while循环
@@ -329,7 +330,7 @@ while (条件表达式) {
 }
 ```
 #### 练习
-[day6.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day6.c)
+[day6.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day6.c)
 
 #### for循环
 ##### 基本结构
@@ -339,7 +340,7 @@ for(初始化语句;循环条件;自增或自减){
 }
 ```
 ##### 练习
-[day14.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day14.c)
+[day14.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day14.c)
 
 #### do while循环
 ##### 基本结构
@@ -350,7 +351,7 @@ do{
 while(条件表达式);
 ```
 ##### 练习
-[day15.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day15.c)
+[day15.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day15.c)
 
 ### 控制语句
 用于控制程序的执行流程
@@ -365,7 +366,7 @@ while(条件表达式);
 语句;
 goto 标签名;
 ```
-[day17.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day17.c)
+[day17.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day17.c)
 #### continue语句
 跳过循环体中剩余的语句而强制进入下一次循环
 `continue`语句只用在`while`、`for`循环中，常与`if`条件语句一起使用，判断条件是否成立
@@ -392,6 +393,13 @@ goto 标签名;
 
 ### 野指针
 指针指向的内存空间没有初始化（NULL），或者已经释放
+### 指针的运算
+#### 指针的加减
+指针变量可以进行加减法运算
+### 指针数组
+指针数组是指存放指针的数组
+#### 练习
+[day31.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day31.c)
 
 #### 传值调用：不加*
 将实参的值传递给形参，形参的值改变不会影响实参的值
@@ -399,6 +407,21 @@ goto 标签名;
 将实参的地址传递给形参，形参的值改变会影响实参的值
 ### 野指针
 指针指向的地址不明确（没有初始化），不存在或者非法访问，称为野指针
+
+1. **未初始化的指针**：如果声明了一个指针变量但没有给它赋予一个确切的、有效的地址，那么它就是一个野指针。
+2. **已释放的内存空间**：如果指针指向的内存被释放（如通过`free`或`delete`），但指针没有被设置为`NULL`，它仍然指向那个地址，这时它就成了野指针。
+3. **超出作用域的指针**：如果指针指向一个局部变量的地址，而该局部变量的作用域已经结束，那么该指针也会成为野指针。
+4. **指针运算错误**：错误的指针运算可能导致指针指向一个随机的内存地址，从而成为野指针。
+ 
+为了避免出现这种情况，应该将指针初始化设置为`NULL`，以及避免返回指向局部变量的指针
+
+### 指针的运算
+```C
+// 指针的地址增加
+*ps++;
+// 指针所指向的值增加
+(*ps)++;
+```
 
 # 函数
 ### 链式访问
@@ -453,7 +476,7 @@ goto 标签名;
 可以用`[]`下标访问操作符访问元素的下标，下标索引从0开始，最大不超过数组的长度-1
 
 ## 二维数组
-[day25.c](E:\OneDrive\apply\remotely-save\note\learn\Learn-Python\C\day25.c)
+[day25.c](E:\OneDrive\apply\remotely-save\note\Learn-Python\C\day25.c)
 ### 变长数组
 在 C 99 引入的概念，在支持 C 99 的编译器，比如 gcc 等，可以在程序运行时引入数组的长度，从而动态分配，而不是在编译之前写死不动，但同时数组长度过大会引起栈溢出。
 ```C
