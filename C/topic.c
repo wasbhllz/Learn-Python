@@ -252,6 +252,18 @@ int main() {
     printf("positive:%d\nnegative:%d",a,b);
     return 0;
 }
+*/
+// 24.04.08
+#include <stdio.h>
+int main() {
+    int a, b, c;
+    a = 5;
+    c = ++a;
+    b = ++c, c++, ++a, a++; // 因为逗号表达式的优先级最低，所以b会先被赋值，再计算逗号表达式的值,所以b=7
+    b += a++ + c;
+    printf("a = %d,b = %d,c = %d",a,b,c);
+    return 0;
+} 
 
 // 24.04.09
 #include <stdio.h>
