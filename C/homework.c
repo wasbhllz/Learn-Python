@@ -283,7 +283,6 @@ p[1][0] = a[3], p[1][1] = a[4], p[1][2] = a[5];
 p[2][0] = a[6], p[2][1] = a[7], p[2][2] = a[8];
 p[3][0] = a[9], p[3][1] = a[10], p[3][2] = a[11];
 
-*/
 //写一个函数返回二进制中1的个数
 #include <stdio.h>
 int count(int a){
@@ -299,5 +298,49 @@ int main() {
     int a = 0;
     scanf("%d", &a);
     printf("%d", count(a));
+    return 0;
+}
+
+// 24.04.12
+//写一个函数判断是否是2的n次方
+#include <stdio.h>
+int count(int a){
+    if(a&(a-1)==0)
+    printf("Yes");
+    else
+    printf("No");
+}
+int main() {
+    int a = 0;
+    scanf("%d", &a);
+    count(a);
+    return 0;
+}
+*/
+//求两个数二进制中不同位的个数
+#include <stdio.h>
+int count(int a,int b){
+    int c = a^b; //先异或出不同的位数为1
+    int d = 0;
+    while(c){
+        c = c & (c - 1); // 再一个个判断最右边一位是否为1，为1加1
+        d++;
+    }
+    return d;
+}
+int count2(int a,int b){
+    int d = 0;
+    for (int i = 0; i < 32;i++)
+    {
+        if((((a>>i)&1))!=((b>>i)&1)) //比较一个个右移的位数中有哪些不同
+        d++;
+    }
+    return d;
+}
+int main() {
+    int a = 0;
+    int b = 0;
+    scanf("%d %d", &a, &b);
+    printf("%d", count(a,b));
     return 0;
 }
