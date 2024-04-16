@@ -15,21 +15,22 @@ int main()
 int main(){
     int a = 5;
     int c = 6;
-    int b = a & c; //按位与,比较二进制补码中，如果两个都为1为1，都不为1为0
-    int z = a | c; //按位或，如果两个有一个为1为1，都不为1为0
-    int s = a ^ c; //按位异或,同0异1
-    int x = ~a; //按位取反，将1变为0，将0变为1
+    int b = a & c;
+    int z = a | c;
+    int s = a ^ c;
+    int x = ~a;
     printf("%d,%d,%d,%d,%d", a, c, b, z, s);
     return 0;
 }
 */
+// 重点题目
 // 题目：在不创建临时变量的情况下，将两个变量的值交换
 int main(){
     int a = 5;
     int b = 8;
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
+    a = a ^ b; //a被赋予了a和b的异或结果，即a ^ b。
+    b = a ^ b; //此时a已经被更新为a ^ b，因此b被赋予了a ^ b与b的异或结果，即a ^ b ^ b，等价于a。
+    a = a ^ b; //此时b已经被更新为原来的a，而a已经被更新为a ^ b，因此a被赋予了a ^ b与原始a的异或结果，即a ^ a ^ b，等价于b。
     printf("%d,%d", a, b);
     return 0;
 }
