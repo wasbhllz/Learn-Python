@@ -1,20 +1,10 @@
 // 24.02.21
-//ASCII码转字符
+// ASCII码转字符
 /*
 #include <stdio.h>
 int main() {
-    int a = 0xABCDEF; // 表示ASCII码
+    int a = 0xABCDEF; // 表示16进制
         printf("%15d\n",a);
-    return 0;
-}
-
-// 我是大V
-#include <stdio.h>
-int main() {
-    int a;
-    scanf("%d", &a);
-        printf("    %d\n   %d %d\n  %d %d %d\n %d %d %d %d\n%d %d %d %d %d", a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
-
     return 0;
 }
 
@@ -23,7 +13,7 @@ int main() {
 int main() {
     int a, b,c;
     int result = scanf("%4d%2d%2d", &a, &b,&c); // 为避免scanf重复调用导致出现两次提示
-    if (result !=3){ // 判断输入是否为整数,数据项数和占位符的个数相同,即:输入!=1
+    if (result !=3){ // 判断读取输入是否成功,读取成功一个值返回1，否则返回EOF
         printf("输入的不是整数,请重新输入\n");
         return 1;
     }
@@ -42,7 +32,7 @@ int main() {
 // ASCII码转字符
 #include <stdio.h>
 int main() {
-    char a[] = {73, 32, 99, 97, 110, 32, 100, 111, 32, 105, 116 , 33}; // 这些整数表示ASCII码
+    char a[] = {73, 32, 99, 97, 110, 32, 100, 111, 32, 105, 116 , 33}; // 整型转变为字符型
         printf("%s", a);
     return 0;
 }
@@ -51,17 +41,8 @@ int main() {
 #include <stdio.h>
 int main() {
     char a[100];
-    scanf("%s", a); //"%s"不用&取地址
+    scanf("%s", a); //数组本身是首元素地址，所以不用&取地址
     printf("%d\n", a);
-    return 0;
-}
-
-// 两个字符颠倒顺序
-#include <stdio.h>
-int main(){
-    char a,b;
-    scanf("%s %s",a,b);
-    printf("%d\n%d",b,a);
     return 0;
 }
 
@@ -83,6 +64,7 @@ int main() {
         printf("%d %d\n", c,d);
     return 0;
 }
+
 // 24.03.31
 //序列中删除指定数字
 #include <stdio.h>
@@ -105,6 +87,7 @@ int main() {
     return 0;
 }
 
+//递归题目
 //青蛙跳台阶
 #include <stdio.h>
 int recursion(int a){
@@ -253,6 +236,7 @@ int main() {
     return 0;
 }
 
+// 重点题目
 // 24.04.08
 #include <stdio.h>
 int main() {
@@ -263,7 +247,7 @@ int main() {
     b += a++ + c;
     printf("a = %d,b = %d,c = %d",a,b,c);
     return 0;
-} 
+}
 
 // 24.04.09
 #include <stdio.h>
@@ -276,7 +260,7 @@ int main(void) {
 }
 
 // 指针数组p
-// C语言里，所有下标的表示法（如p[3]），最后都会转换成这种 *(p+3) 。理解了这一点，那么，二维形式的  p[i][j]  会被转换成 *(*(p + i) + j)，即：p[3][2]会被转化成 *(*(p +3) + 2) 
+// C语言里，所有下标的表示法（如p[3]），最后都会转换成这种 *(p+3) 。理解了这一点，那么，二维形式的  p[i][j]  会被转换成 *(*(p + i) + j)，即：p[3][2]会被转化成 *(*(p +3) + 2)
 
 p[0][0] = a[0], p[0][1] = a[1], p[0][2] = a[2];
 p[1][0] = a[3], p[1][1] = a[4], p[1][2] = a[5];
@@ -317,30 +301,34 @@ int main() {
     return 0;
 }
 */
-//求两个数二进制中不同位的个数
+// 求两个数二进制中不同位的个数
 #include <stdio.h>
-int count(int a,int b){
-    int c = a^b; //先异或出不同的位数为1
+int count(int a, int b)
+{
+    int c = a ^ b; // 先异或出不同的位数为1
     int d = 0;
-    while(c){
+    while (c)
+    {
         c = c & (c - 1); // 再一个个判断最右边一位是否为1，为1加1
         d++;
     }
     return d;
 }
-int count2(int a,int b){
+int count2(int a, int b)
+{
     int d = 0;
-    for (int i = 0; i < 32;i++)
+    for (int i = 0; i < 32; i++)
     {
-        if((((a>>i)&1))!=((b>>i)&1)) //比较一个个右移的位数中有哪些不同
-        d++;
+        if ((((a >> i) & 1)) != ((b >> i) & 1)) // 比较一个个右移的位数中有哪些不同
+            d++;
     }
     return d;
 }
-int main() {
+int main()
+{
     int a = 0;
     int b = 0;
     scanf("%d %d", &a, &b);
-    printf("%d", count(a,b));
+    printf("%d", count(a, b));
     return 0;
 }
