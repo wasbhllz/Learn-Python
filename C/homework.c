@@ -316,15 +316,15 @@ int main() {
     count(a);
     return 0;
 }
-*/
+
 //求两个数二进制中不同位的个数
 #include <stdio.h>
 int count(int a,int b){
     int c = a^b; //先异或出不同的位数为1
     int d = 0;
     while(c){
-        c = c & (c - 1); // 再一个个判断最右边一位是否为1，为1加1
-        d++;
+        c = c & (c - 1); //这个操作的效果是每次循环都会消除 c 中的一个 1，直到 c 变为 0
+        d++; // 再一个个判断最右边一位是否为1，为1加1
     }
     return d;
 }
@@ -343,4 +343,65 @@ int main() {
     scanf("%d %d", &a, &b);
     printf("%d", count(a,b));
     return 0;
+}
+
+// 24.04.14
+// 获取一个整数的二进制序列中所有的奇数和偶数，分别打印出二进制序列
+#include <stdio.h>
+int count(int a){
+    int cont = 0;
+    int odd = 0;
+    for (int i = 30; i >=0;i-=2){
+        printf("%d",(a >> i)&1);
+    }
+    printf("\n");
+    for (int j = 31; j >= 1;j-=2){
+        printf("%d",(a >> j)&1);
+        }
+}
+int main() {
+    int a = 0;
+    scanf("%d", &a);
+    count(a);
+    return 0;
+}
+
+// 24.04.15
+// X形图案
+// 打印图案的题，先找到图案的规律再写
+#include <stdio.h>
+int main() {
+    int a=0;
+    while(scanf("%d",&a)==1)
+    for(int i=0;i<a;i++){
+        for(int j=0;j<a;j++){
+            if(i==j)
+                printf("*");
+            else if(i+j==a-1)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/ 
+// 获得月份天数
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    while(scanf("%d %d", &a, &b)==2){
+        if (a % 4 == 0) {
+            if (b == 2)
+                printf("29\n");
+        } else if(b == 2)
+            printf("28\n");
+        if((b<8 && b%2==1)||(b>7 && b%2==0))
+            printf("31\n");
+        else if(b != 2 &&((b<8 && b%2==0)||(b>7 && b%2==1)))
+            printf("30\n");
+            }
+return 0;
 }
