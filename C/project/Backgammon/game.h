@@ -3,8 +3,8 @@
 #include <time.h>
 #include <stdlib.h>
 // 使代码更容易扩展
-#define ROW 3
-#define COL 3
+#define ROW 9
+#define COL 9
 // 玩家赢'*'
 // 电脑赢'#'
 // 平局'Q'
