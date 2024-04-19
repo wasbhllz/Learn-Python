@@ -28,27 +28,65 @@ int main(){
     }
     return 0;
 }
-*/
-// 24.04.17
-// 
-void hhh(int a){
-    int arr[a][a];
+
+// 24.04.19
+// 数组传参有点生疏
+// 计算杨辉三角形第n列的值
+void hhh(int a,int arr[a][a]){
     for(int i = 0; i < a;i++){
-        for (int j = 0; j < a;j++){
+        for (int j = 0; j <= i;j++){ //打印为三角形
+            if(j==0 || j==i) //对角线的元素都赋值为1
+            arr[i][j] = 1;
+            else
             arr[i][j] = 0;
-            printf("%d ",arr[i][j]);
-            }
+            //printf("%d ",arr[i][j]);
         }
+        //printf("\n");
+    }
+}
+void bbb(int a,int arr[a][a]){
+    for (int i = 0; i < a;i++){
+        for (int j = 0; j <= i; j++)
+        {
+            if(arr[i][j]==0)
+            arr[i][j]=arr[i-1][j-1]+arr[i-1][j]; //计算1以外的值
+            printf("%5d", arr[i][j]);
+        }
+        printf("\n");
+    }
 }
 int main(){
     int a = 0;
     scanf("%d", &a);
-    for (int i = 0; i < a; i++)
-    {
-        for (int j = 0; j < a;j++){
-        printf("%d ",hhh(a));
+    int arr[a][a];
+    hhh(a,arr); //初始化
+    bbb(a,arr);
+    return 0;
+}
+
+// 三角形判断
+int main(){
+    int a,b,c;
+    while(scanf("%d %d %d", &a,&b,&c)==3){
+        if((a+b)>c && (a+c)>b && (b+c)>a){ //满足任意两边之和大于第三边
+            if(a==b && b==c && a==c)
+                printf("Equilateral triangle!\n");
+            else if(a==b ||b==c ||a==c)
+                printf("Isosceles triangle!\n");
+            else
+                printf("Ordinary triangle!\n");
         }
-        printf("\n");
+        else
+            printf("Not a triangle!\n");
+    }
+    return 0;
+}
+*/
+//
+int main(){
+    int a = 0;
+    while(scanf("%d",&a)!=EOF){
+            printf("%d", a);
     }
     return 0;
 }
