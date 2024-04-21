@@ -82,11 +82,3 @@ int main(){
     return 0;
 }
 */
-//
-int main(){
-    int a = 0;
-    while(scanf("%d",&a)!=EOF){
-            printf("%d", a);
-    }
-    return 0;
-}
