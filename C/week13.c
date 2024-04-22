@@ -51,7 +51,7 @@ int main(){
 pow(10,0)
 
 */
-
+// 打印1~100000内的水仙花数
 int solo(int a){
     int sum = 0;
     for (int i = 10; i < 100000;i++){
