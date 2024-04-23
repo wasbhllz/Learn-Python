@@ -4,7 +4,10 @@
         "stdlib.h": "c",
         "time.h": "c",
         "limits": "c",
-        "game.h": "c"
+        "game.h": "c",
+        "assert.h": "c",
+        "math.h": "c",
+        "cmath": "c"
     },
     "cmake.sourceDirectory": "C:/Users/Administrator/AppData/Local/Programs/Learn-Python/C/.vscode"
 }

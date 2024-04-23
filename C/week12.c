@@ -63,7 +63,7 @@ int main(){
     bbb(a,arr);
     return 0;
 }
-
+*/
 // 三角形判断
 int main(){
     int a,b,c;
@@ -81,4 +81,4 @@ int main(){
     }
     return 0;
 }
-*/
+
