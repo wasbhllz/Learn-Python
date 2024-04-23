@@ -45,8 +45,8 @@ int main(){
 
 153=1^3+5^3+3^3
 153/pow(10,2) 1
-153%pow(10,2)+153/pow(10,1) 5
-153%pow(10,2)+153/pow(10,1)+153%pow(10,1) 3
+(153/pow(10,1))%10 5
+153%pow(10,1) 3
 100000
 pow(10,0)
 
@@ -54,13 +54,18 @@ pow(10,0)
 // 打印1~100000内的水仙花数
 int solo(int a){
     int sum = 0;
-    for (int i = 10; i < 100000;i++){
-        for (int j = 0; j <= 5;j++){
-            if(i/pow(10,j)==1){
-                sum = i / pow(10,j);
-                sum *= i / pow(10,j);
+    for (int i = 1; i < 100000;i++){
+        //计算幂
+        int b = log(a)+1;
+        int temp = i;
+        int num = 0;
+        //计算单个数
+        while(temp){
+            num = temp / pow(10, 2);
+            sum = (temp / pow(10, 1)) % 10;
+            temp = temp % pow(10, 1);
             }
-            sum += i / pow(10,j);
+            
         }
     }
 }
