@@ -44,33 +44,32 @@ int main(){
 }
 
 153=1^3+5^3+3^3
-153/pow(10,2) 1
-(153/pow(10,1))%10 5
-153%pow(10,1) 3
+153/10 3
+(153/pow(3,3)) 5
+53%pow(10,1) 3
 100000
 pow(10,0)
 
 */
+// 24.04.23
 // 打印1~100000内的水仙花数
-int solo(int a){
-    int sum = 0;
+#include <math.h>
+int main(){
+    int i, b, temp;
     for (int i = 1; i < 100000;i++){
         //计算幂
-        int b = log(a)+1;
-        int temp = i;
-        int num = 0;
-        //计算单个数
-        while(temp){
-            num = temp / pow(10, 2);
-            sum = (temp / pow(10, 1)) % 10;
-            temp = temp % pow(10, 1);
+        int b = (int)log(i)+1;
+        int num = i;
+        int sum = 0;
+        //计算单个数的幂之和
+        temp = i;
+        while(temp>0){
+            temp = temp / 10;
+            sum = sum + pow(temp, b); //每位数字的幂
+            temp = temp % 10;
             }
-            
-        }
+        if(sum==num)
+            printf("%d\n", num);
     }
-}
-int main(){
-    int a = 0;
-    add(solo(a));
     return 0;
 }
