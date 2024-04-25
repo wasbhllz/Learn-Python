@@ -44,32 +44,59 @@ int main(){
 }
 
 153=1^3+5^3+3^3
+从右往左取单个数字
+153%10 1
+(153/10) 5
 153/10 3
-(153/pow(3,3)) 5
-53%pow(10,1) 3
 100000
 pow(10,0)
 
-*/
-// 24.04.23
+// 24.04.25
 // 打印1~100000内的水仙花数
 #include <math.h>
 int main(){
-    int i, b, temp;
     for (int i = 1; i < 100000;i++){
-        //计算幂
-        int b = (int)log(i)+1;
-        int num = i;
+        //计算数字位数
+        int b = (int)log10(i)+1;
         int sum = 0;
         //计算单个数的幂之和
-        temp = i;
+        int temp = i;
         while(temp>0){
-            temp = temp / 10;
-            sum = sum + pow(temp, b); //每位数字的幂
-            temp = temp % 10;
+            int num = temp%10; //最右边的数字
+            sum += pow(num, b); //每位数字的幂
+            temp /= 10; //最左边的数字
             }
-        if(sum==num)
-            printf("%d\n", num);
+        if(sum==i)
+            printf("%d\n", i);
     }
     return 0;
+}
+*/
+//
+int main(){
+    int line2 = 0;
+    scanf("%d", &line2);
+    int line = (line2 / 2)+1;
+    // 打印上半部分
+    for (int i = 0; i < line;i++){
+        for (int j = 0; j < line-1-i;j++){
+            printf(' ');
+        }
+        printf("\n");
+        for (int j = line; j <= (line*2-1);j+=2){
+                printf('*');
+        }
+        printf("\n");
+    }
+    for (int i = 1; i <= 11;i++){
+        for (int j = 1; j <= line-1+;j++){
+            printf(' ');
+        }
+        printf("\n");
+        for (int j = 13; j > 6;j--){
+            printf('*');;
+        }
+        printf("\n");
+    }
+        return 0;
 }
