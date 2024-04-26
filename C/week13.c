@@ -71,32 +71,81 @@ int main(){
     }
     return 0;
 }
-*/
+
 //
-int main(){
+int main()
+{
     int line2 = 0;
     scanf("%d", &line2);
-    int line = (line2 / 2)+1;
+    int line = (line2 / 2) + 1;
     // 打印上半部分
-    for (int i = 0; i < line;i++){
-        for (int j = 0; j < line-1-i;j++){
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line - 1 - i; j++)
+        {
             printf(' ');
         }
         printf("\n");
-        for (int j = line; j <= (line*2-1);j+=2){
-                printf('*');
+        for (int j = line; j <= (line * 2 - 1); j += 2)
+        {
+            printf('*');
         }
         printf("\n");
     }
-    for (int i = 1; i <= 11;i++){
-        for (int j = 1; j <= line-1+;j++){
+    for (int i = 1; i <= 11; i++)
+    {
+        for (int j = 1; j <= line - 1 + ; j++)
+        {
             printf(' ');
         }
         printf("\n");
-        for (int j = 13; j > 6;j--){
-            printf('*');;
+        for (int j = 13; j > 6; j--)
+        {
+            printf('*');
+            ;
         }
         printf("\n");
     }
-        return 0;
+    return 0;
+}
+
+// 24.04.26
+// 打印K图形
+int main(){
+    int a = 0;
+    scanf("%d", &a);
+    // 上
+    for (int i = 0; i < a;i++){ //i控制列
+        printf("**");
+        for (int j = 0; j < a-i;j++){ //j控制前行
+            printf(" ");
+        }
+        for (int z = 0; z < a-i;z++){
+            printf("*");
+            }
+        printf("\n");
+    }
+    //中
+    printf("***\n");
+    //下
+    for (int i = 0; i < a;i++){
+        printf("**");
+        for (int j = 0; j <= i;j++){
+            printf(" ");
+        }
+        for (int z = 0; z <= i;z++){
+            printf("*");
+            }
+        printf("\n");
+    }
+    return 0;
+    }
+*/
+
+int main(){
+    int money = 0;
+    scanf("%d", &money);
+    int bottle, drink, a;
+    
+    return 0;
 }
