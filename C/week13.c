@@ -141,11 +141,22 @@ int main(){
     return 0;
     }
 */
-
+// 24.04.27
+// 买汽水问题
+// 1元1瓶汽水，2个空瓶能换1瓶汽水，小明有20元，最多能买多少瓶汽水
 int main(){
     int money = 0;
     scanf("%d", &money);
-    int bottle, drink, a;
-    
+    int a = 0;
+    int c = 0;
+    int drink = money;
+    int bottle = drink;
+    while(drink >=1){
+        bottle = drink+c;
+        a += drink;
+        drink = bottle / 2;
+        c = bottle % 2;
+    }
+    printf("%d", a);
     return 0;
 }
