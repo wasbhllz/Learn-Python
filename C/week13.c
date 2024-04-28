@@ -72,31 +72,30 @@ int main(){
     return 0;
 }
 */
-//
+// 打印菱形
 int main(){
-    int line2 = 0;
-    scanf("%d", &line2);
-    int line = (line2 / 2)+1;
+    int line = 0;
+    scanf("%d", &line);
     // 打印上半部分
     for (int i = 0; i < line;i++){
         for (int j = 0; j < line-1-i;j++){
-            printf(' ');
+            printf(" ");
         }
-        printf("\n");
-        for (int j = line; j <= (line*2-1);j+=2){
-                printf('*');
+        for (int j = 0; j < i*2+1;j++){
+            printf("*");
         }
         printf("\n");
     }
-    for (int i = 1; i <= 11;i++){
-        for (int j = 1; j <= line-1+;j++){
-            printf(' ');
-        }
-        printf("\n");
-        for (int j = 13; j > 6;j--){
-            printf('*');;
-        }
-        printf("\n");
+    // 打印下半部分
+    for (int i = 0; i < line-1;i++){
+            for (int j = 0; j <= i; j++)
+            {
+                printf(" ");
+            }
+            for (int j = 0; j < (line-1-i)*2-1;j++){
+                printf("*");
+            }
+            printf("\n");
     }
         return 0;
 }
