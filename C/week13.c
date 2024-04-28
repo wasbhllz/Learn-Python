@@ -71,16 +71,26 @@ int main(){
     }
     return 0;
 }
-*/
+
 // 打印菱形
 int main(){
-    int line = 0;
-    scanf("%d", &line);
+    int line2 = 0;
+    scanf("%d", &line2);
+    int line = (line2 / 2)+1;
     // 打印上半部分
+    for (int i = 0; i < line; i++)
+    {
+        for (int j = 0; j < line - 1 - i; j++)
+        {
+            printf(' ');
     for (int i = 0; i < line;i++){
         for (int j = 0; j < line-1-i;j++){
             printf(" ");
         }
+        printf("\n");
+        for (int j = line; j <= (line * 2 - 1); j += 2)
+        {
+            printf('*');
         for (int j = 0; j < i*2+1;j++){
             printf("*");
         }
@@ -97,5 +107,57 @@ int main(){
             }
             printf("\n");
     }
-        return 0;
+    return 0;
+}
+
+// 24.04.26
+// 打印K图形
+int main(){
+    int a = 0;
+    scanf("%d", &a);
+    // 上
+    for (int i = 0; i < a;i++){ //i控制列
+        printf("**");
+        for (int j = 0; j < a-i;j++){ //j控制前行
+            printf(" ");
+        }
+        for (int z = 0; z < a-i;z++){
+            printf("*");
+            }
+        printf("\n");
+    }
+    //中
+    printf("***\n");
+    //下
+    for (int i = 0; i < a;i++){
+        printf("**");
+        for (int j = 0; j <= i;j++){
+            printf(" ");
+        }
+        for (int z = 0; z <= i;z++){
+            printf("*");
+            }
+        printf("\n");
+    }
+    return 0;
+    }
+*/
+// 24.04.27
+// 买汽水问题
+// 1元1瓶汽水，2个空瓶能换1瓶汽水，小明有20元，最多能买多少瓶汽水
+int main(){
+    int money = 0;
+    scanf("%d", &money);
+    int a = 0;
+    int c = 0;
+    int drink = money;
+    int bottle = drink;
+    while(drink >=1){
+        bottle = drink+c;
+        a += drink;
+        drink = bottle / 2;
+        c = bottle % 2;
+    }
+    printf("%d", a);
+    return 0;
 }
