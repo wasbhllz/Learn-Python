@@ -163,3 +163,18 @@ int main(){
 }
 */
 // 24.04.28
+int num(int a,int b){
+    for (int i = 0; i <= a;i++){
+        for (int j = 0; j <= b;j++){
+            if (a*i == b*j && i!=0){
+                return a*i;
+            }
+        }
+    }
+}
+int main(){
+    int a = 0, b = 0;
+    scanf("%d %d", &a, &b);
+    printf("%d",num(a,b));
+    return 0;
+}
