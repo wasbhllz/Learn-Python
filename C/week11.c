@@ -11,23 +11,6 @@ int main(){
 }
 //数组能够从左往右访问越界后一位，但不能从右往左越界前一位
 
-//指针数组
-int main(){
-    int arr[]={1,2,3};
-    int arr1[]={2,3,4};
-    int arr2[]={3,4,5};
-    int*pa[3]={arr,arr1,arr2}; //用指针数组来模拟二维数组
-    for(int i=0;i<3;i++)
-    {
-        int j;
-        for(j=0;j<3;j++)
-        {
-            printf("%d ",pa[i][j]); //pa[1]相当于访问arr数组,pa[1][j],相当于访问arr[j]
-        }
-        printf("\n");
-    }
-    return 0;
-}
 */
 // 结构体嵌套
 struct stu{
