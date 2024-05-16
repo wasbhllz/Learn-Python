@@ -44,12 +44,7 @@ int main(){
       return 0;
 }
 
-// strlen标识符,求字符的大小,单位字节
-int main(){
-      char e[] = "我是娜维娅老板的狗！"; //存储字符串可以用数组
-      printf("%d",strlen(e)); //忘记加"%d"了,printf()只能将字符串做为第一参数
-      return 0;
-}
+
 */
 // 23.12.27
 # define WIFE "散兵"

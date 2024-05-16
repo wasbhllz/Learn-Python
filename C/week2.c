@@ -5,7 +5,7 @@ extern int num; //声明来自外部的符号
 int main()
 {
      int num2 = 0; //初始化值
-     scanf("%d %d", &num, &num2); //scanf()输出函数
+     scanf("%d %d", &num, &num2); //scanf()输入函数
      int sum = num + num2; //求和
      printf("%d", sum);
 
@@ -24,7 +24,7 @@ int main(void)
       a = b; //第9行
       printf("%d %d\n", b, a);
       return 0;
-} 
+}
 
 // 编写一个程序把你的年龄转换成天数，并显示这两个值。
 int main(){
@@ -54,7 +54,7 @@ void jolly(void){
 void deny(void){
             printf("Which nobody can deny!");
       }
-      
+
 // 定义和调用函数题目2
 void br(void);
 void ic(void);
@@ -83,19 +83,22 @@ return 0;
 
 // 定义和调用函数题目4
 void one_three(void);
-void two(void); 
-int main(){
-printf("starting now:\n");
-one_three();
-two();
-printf("done!");
-return 0;
+void two(void);
+int main()
+{
+    printf("starting now:\n");
+    one_three();
+    two();
+    printf("done!");
+    return 0;
 }
-void one_three(void){
-printf("one\n");
+void one_three(void)
+{
+    printf("one\n");
 }
-void two(void){
-printf("two\nthree\n");
+void two(void)
+{
+    printf("two\nthree\n");
 }
 
 // 23.12.22
@@ -128,16 +131,6 @@ int main(){
       return 0;
 }
 
-// 23.12.23
-// \\和\"相当于转义转义字符
-// 常用转义字符
-int main(){
-    printf("哈哈\r"); // 光标移到本行开头
-    printf("哈哈\n"); // 换行
-    printf("\051"); // 八进制的转义序列
-    printf("\x29"); // 十六进制的转义序列
-    return 0;
-}
 // 数组:按顺序排列的同类型序列
 int main(){
       int arr[] = {1,2,3,4,5};
@@ -147,7 +140,7 @@ int main(){
             a++;
       }
       return 0;
-} 
+}
 
 // 题目
 int main(){
