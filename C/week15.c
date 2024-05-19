@@ -1,8 +1,8 @@
-// 24.05.07
+// 24.05.18
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
-/**/
+/*
 // 反转字符串
 // 反转整个字符串
 void hh(char *left,char*right){
@@ -41,3 +41,5 @@ int main(){
     printf("%s", arr);
     return 0;
 }
+*/
+// 24.05.19

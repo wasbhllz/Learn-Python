@@ -7,7 +7,8 @@
         "game.h": "c",
         "assert.h": "c",
         "math.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "string.h": "c"
     },
     "cmake.sourceDirectory": "E:/OneDrive/apply/remotely-save/note/Learn-Python/C/.vscode"
 }
