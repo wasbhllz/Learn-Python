@@ -1,27 +1,29 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the functions
-def f1(x):
-    return 18 + 10* x
+# 创建一个新的图
+plt.figure(figsize=(6,6))
 
-def f2(x):
-    return 12 * 1.4**x
+# 画单位圆
+theta = np.linspace(0, 2 * np.pi, 400)
+x = np.cos(theta)
+y = np.sin(theta)
+plt.plot(x, y, label='Unit Circle')
 
-# Generate x values
-x_values = np.linspace(0, 10, 400)
+# 标注特殊角度
+angles = [0, np.pi/6, np.pi/4, np.pi/3, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi]
+angle_labels = ['0', 'π/6', 'π/4', 'π/3', 'π/2', 'π', '3π/2', '2π']
+for angle, label in zip(angles, angle_labels):
+    plt.plot([0, np.cos(angle)], [0, np.sin(angle)], linestyle='--', color='gray')
+    plt.text(np.cos(angle)*1.1, np.sin(angle)*1.1, label, ha='center', va='center')
 
-# Compute y values for both functions
-y_values_f1 = f1(x_values)
-y_values_f2 = f2(x_values)
-
-# Create the plot
-plt.figure(figsize=(10, 6))
-plt.plot(x_values, y_values_f1, label=r'$f(x) = 3x + 60$', color='blue')
-plt.plot(x_values, y_values_f2, label=r'$f(x) = 50 \cdot 1.08^x$', color='red')
+# 设置图的属性
+plt.axhline(0, color='black',linewidth=0.5)
+plt.axvline(0, color='black',linewidth=0.5)
+plt.grid(color = 'gray', linestyle = '--', linewidth = 0.5)
+plt.title('Unit Circle')
 plt.xlabel('x')
-plt.ylabel('f(x)')
-plt.title('Comparison of f(x) = 500x + 25000 and f(x) = 20000 * 1.05^x')
+plt.ylabel('y')
+plt.axis('equal')
 plt.legend()
-plt.grid(True)
 plt.show()
