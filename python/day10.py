@@ -23,7 +23,7 @@ if user not in banned_user:
 	print(user.title()+'欢迎您留言！')
 
 love = 'app'
-if love or user not in bannend_user:
+if love or user not in banned_user:
 	print(love)
 
 digit = [4,5,8,32,61,1,20,]
